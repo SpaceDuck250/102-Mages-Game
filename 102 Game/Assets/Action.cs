@@ -3,6 +3,8 @@ using UnityEngine;
 public abstract class Action : MonoBehaviour
 {
     public string commandInput;
+    public string outputLine;
+    public NodeScript transitionNode;
 
     public abstract void DoAction();
 
@@ -14,5 +16,10 @@ public abstract class Action : MonoBehaviour
         }
 
         return false;
+    }
+
+    public virtual void SaySomething()
+    {
+        DialogueManager.instance.PlayLine(outputLine);
     }
 }

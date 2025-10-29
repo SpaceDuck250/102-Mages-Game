@@ -8,11 +8,15 @@ public class NodeScript : MonoBehaviour
 
     public string inputString;
 
-    private void Update()
+    public void CheckChoices(string input)
     {
-        if (choices[0].CheckCommand(inputString))
+        foreach (Action choice in choices)
         {
-            choices[0].DoAction();
+            if (choice.CheckCommand(input))
+            {
+                choice.DoAction();
+                choice.SaySomething();
+            }
         }
     }
 }
