@@ -1,15 +1,16 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
+    
+
     public string currentLine;
     public TextMeshProUGUI text;
 
     public float waitTime;
-
-    public string inputString;
 
     public static DialogueManager instance;
 

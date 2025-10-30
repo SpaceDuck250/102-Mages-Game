@@ -12,6 +12,7 @@ public abstract class Action : MonoBehaviour
     {
         if (input.ToLower() == commandInput.ToLower())
         {
+            TransitionToNewNode();
             return true;
         }
 
@@ -21,5 +22,10 @@ public abstract class Action : MonoBehaviour
     public virtual void SaySomething()
     {
         DialogueManager.instance.PlayLine(outputLine);
+    }
+
+    public virtual void TransitionToNewNode()
+    {
+        CommandProcessor.instance.currentNode = transitionNode;
     }
 }

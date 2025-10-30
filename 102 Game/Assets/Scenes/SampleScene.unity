@@ -119,6 +119,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &48175896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 48175898}
+  - component: {fileID: 48175897}
+  m_Layer: 0
+  m_Name: City
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &48175897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48175896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da40d0d8ca7fcd45b23ffa144aa9d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choices: []
+  nodeImage: {fileID: 21300000, guid: 9d29e4319629a994da3f14ecb8b6b591, type: 3}
+  battler: {fileID: 0}
+  sceneText: You are in Yew Nork... How will you get home?
+--- !u!4 &48175898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48175896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0064844824, y: 0.24031687, z: 0.03558909}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &396679837
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +257,7 @@ GameObject:
   - component: {fileID: 503537212}
   - component: {fileID: 503537211}
   m_Layer: 0
-  m_Name: Punch
+  m_Name: Drive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,9 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e119ec0f87917c40b9c87313a7b02e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: Do Punch
-  outputLine: You just punched
-  transitionNode: {fileID: 0}
+  commandInput: Drive Car
+  outputLine: You drove your car back to the city
+  transitionNode: {fileID: 48175897}
 --- !u!4 &503537212
 Transform:
   m_ObjectHideFlags: 0
@@ -691,6 +739,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1229789682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229789685}
+  - component: {fileID: 1229789684}
+  - component: {fileID: 1229789683}
+  m_Layer: 5
+  m_Name: SceneImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1229789683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229789682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1229789684
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229789682}
+  m_CullTransparentMesh: 1
+--- !u!224 &1229789685
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229789682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1828488147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0050049, y: 9.4009}
+  m_SizeDelta: {x: 799.99, y: 404.33}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1319505181
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +982,7 @@ GameObject:
   - component: {fileID: 1429951454}
   - component: {fileID: 1429951453}
   m_Layer: 0
-  m_Name: Node
+  m_Name: Jungle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,7 +1002,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - {fileID: 503537211}
-  inputString: 
+  nodeImage: {fileID: 21300000, guid: 43a929d5806622e45867b55d2e8cfb84, type: 3}
+  battler: {fileID: 0}
+  sceneText: You are in the jungle... What do you want to do?
 --- !u!4 &1429951454
 Transform:
   m_ObjectHideFlags: 0
@@ -906,7 +1031,7 @@ GameObject:
   - component: {fileID: 1462892241}
   - component: {fileID: 1462892240}
   m_Layer: 0
-  m_Name: NodeAnalyzer
+  m_Name: CommandProcessor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -924,7 +1049,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9c7c770ad370d4ca19931b8b597c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageDisplay: {fileID: 1229789683}
   currentNode: {fileID: 1429951453}
+  battleMode: 0
 --- !u!4 &1462892241
 Transform:
   m_ObjectHideFlags: 0
@@ -1107,8 +1234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLine: 
   text: {fileID: 1538385467}
-  waitTime: 0.2
-  inputString: something
+  waitTime: 0.1
 --- !u!4 &1539560875
 Transform:
   m_ObjectHideFlags: 0
@@ -1218,6 +1344,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1229789685}
   - {fileID: 2110419598}
   - {fileID: 1042463452}
   m_Father: {fileID: 0}
@@ -1467,7 +1594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1504,3 +1631,4 @@ SceneRoots:
   - {fileID: 396679840}
   - {fileID: 1462892241}
   - {fileID: 1539560875}
+  - {fileID: 48175898}

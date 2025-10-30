@@ -1,12 +1,16 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class NodeScript : MonoBehaviour
 {
-
     public List<Action> choices;
 
-    public string inputString;
+    public Sprite nodeImage;
+
+    public Battler battler;
+
+    public string sceneText;
 
     public void CheckChoices(string input)
     {
@@ -16,6 +20,7 @@ public class NodeScript : MonoBehaviour
             {
                 choice.DoAction();
                 choice.SaySomething();
+                
             }
         }
     }
