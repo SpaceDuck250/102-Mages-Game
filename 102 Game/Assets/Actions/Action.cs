@@ -26,6 +26,11 @@ public abstract class Action : MonoBehaviour
 
     public virtual void TransitionToNewNode()
     {
+        if (transitionNode == null)
+        {
+            return;
+        }
+
         CommandProcessor.instance.currentNode = transitionNode;
     }
 }

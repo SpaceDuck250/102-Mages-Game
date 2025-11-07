@@ -3,18 +3,18 @@ using System.Collections.Generic;
 
 public class Battler : MonoBehaviour
 {
-    public List<string> attackLines = new List<string>(); // Meant for player to type in to deal damage
+    public List<string> playerAttackLines = new List<string>(); // Meant for player to type in to deal damage
     public List<string> dialogueLines = new List<string>(); // The lines that this battler will say
 
-    public float health;
+    public string battlerName;
 
-    public float maxHealth;
+    public float[] damageRange = new float[2];
+    public HealthScript healthScript;
 
-    public float damage;
-
-    private void Start()
+    public void SetupAfterBattleNode(NodeScript previousNode)
     {
-        health = maxHealth;
+        Action action = gameObject.transform.Find("ReturnAction").GetComponent<Action>();
+        action.transitionNode = previousNode;
     }
 
     public string ChooseRandomLine(List<string> lines)
@@ -23,14 +23,9 @@ public class Battler : MonoBehaviour
         return lines[ranValue];
     }
 
-    public void StartBattle()
+    public float PickDamageValue()
     {
-        // Deactivate the node analyzer
-        // Activate the battle analyzer
-    }
-
-    public void FinishBattle()
-    {
-
+        float damage = Random.Range(damageRange[0], damageRange[1]);
+        return damage;
     }
 }

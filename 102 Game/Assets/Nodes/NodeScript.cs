@@ -8,7 +8,7 @@ public class NodeScript : MonoBehaviour
 
     public Sprite nodeImage;
 
-    public Battler battler;
+    //public Battler battler;
 
     public string sceneText;
 

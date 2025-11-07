@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
     
 
     public string currentLine;
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI textbox;
 
     public float waitTime;
 
@@ -19,20 +19,33 @@ public class DialogueManager : MonoBehaviour
         instance = this;
     }
 
-    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            FinishLine();
+        }
+    }
 
     public IEnumerator SlowType(string line)
     {
-        text.text = string.Empty;
+        textbox.text = string.Empty;
         foreach (char c in line.ToCharArray())
         {
-            text.text += c;
+            textbox.text += c;
             yield return new WaitForSeconds(waitTime);
         }
     }
 
     public void PlayLine(string line)
     {
+        if (currentLine == line)
+        {
+            Debug.Log("Already wrote next before");
+            return;
+        }
+
+
         currentLine = line;
 
         StopAllCoroutines();
@@ -41,12 +54,12 @@ public class DialogueManager : MonoBehaviour
 
     public void FinishLine()
     {
-        if (currentLine == null)
+        if (currentLine == "")
         {
             return;
         }
 
         StopAllCoroutines();
-        text.text = currentLine;
+        textbox.text = currentLine;
     }
 }
