@@ -7,6 +7,8 @@ public class Battler : MonoBehaviour
     public List<string> dialogueLines = new List<string>(); // The lines that this battler will say
 
     public string battlerName;
+    public Sprite battlerImage;
+    public Sprite fightSceneImage;
 
     public float[] damageRange = new float[2];
     public HealthScript healthScript;

@@ -1,10 +1,14 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] HealthBarScript playerHealthBar;
     [SerializeField] HealthBarScript battlerHealthBar;
+    public Image battlerImageComponent;
+    public Image fightSceneImageComponent;
+    public Image playerImageComponent;
 
     [SerializeField] GameObject battlePanel;
 
@@ -12,6 +16,8 @@ public class UIManager : MonoBehaviour
 
     PlayerScript player;
     BattleManager battleManager;
+
+    public TMP_InputField inputField;
 
     private void Start()
     {
@@ -27,6 +33,15 @@ public class UIManager : MonoBehaviour
 
         string battlerName = BattleManager.instance.currentBattler.battlerName;
         battlerHealthBar.InitializeSlider(battlerName + " Health");
+
+        Sprite battlerImage = battleManager.currentBattler.battlerImage;
+        Sprite fightSceneImage = battleManager.currentBattler.fightSceneImage;
+        if (battlerImage != null && fightSceneImage != null)
+        {
+            battlerImageComponent.sprite = battlerImage;
+            fightSceneImageComponent.sprite = fightSceneImage;
+        }
+        
     }
 
     public void CloseBattlePanel()
@@ -54,5 +69,11 @@ public class UIManager : MonoBehaviour
     public void SetPromptTextTo(string promptText)
     {
         promptTextBox.text = promptText;
+    }
+
+    public void ClearLineWhenEndEnter()
+    {
+        inputField.text = "";
+        inputField.ActivateInputField();
     }
 }

@@ -12,12 +12,21 @@ public class BattleManager : MonoBehaviour
 
     public bool isPlayersTurn;
 
+    public Animator battlerAnimator;
+    public Animator playerAnimator;
+
     private void Awake()
     {
         instance = this;
         UImanager = GameManager.instance.uiManager;
         player = GameManager.instance.player;
         wordGiver = GameManager.instance.wordGiver;
+    }
+
+    private void Start()
+    {
+        playerAnimator = UImanager.playerImageComponent.GetComponent<Animator>();
+        battlerAnimator = UImanager.battlerImageComponent.GetComponent<Animator>();
     }
 
     public void CommenceBattle(Battler newBattler)
@@ -28,7 +37,7 @@ public class BattleManager : MonoBehaviour
         isPlayersTurn = true;
         UImanager.SetupBattlePanel();
 
-        GivePlayerWordToType(); // This will start the cycle back and forth between the player and the battler
+        StartCoroutine(GivePlayerWordToType()); // This will start the cycle back and forth between the player and the battler
     }
 
     public void RevivePlayerAndBattler()
@@ -50,19 +59,24 @@ public class BattleManager : MonoBehaviour
 
     public void OnBattlerDeath()
     {
+        DialogueManager.instance.PlayLine("You have won the battle against " + currentBattler.battlerName);
+
         EndBattle();
     }
 
     public void OnPlayerDeath()
     {
+        DialogueManager.instance.PlayLine("You have lost the battle to " + currentBattler.battlerName);
+
         EndBattle();
-        print("player Died");
     }
 
     public IEnumerator LetBattlerAttack() // Then check if the player died
     {
-        float waitTime = 1;
+        float waitTime = 1.2f;
         yield return new WaitForSeconds(waitTime);
+        PlayAnim(battlerAnimator, "Base Layer.battlerattack");
+
 
         float damageDelt = currentBattler.PickDamageValue();  
         DealDamageTo(damageDelt, player.gameObject);
@@ -73,6 +87,7 @@ public class BattleManager : MonoBehaviour
     public void LetPlayerAttack(float timeTaken, int wordCount)
     {
         float damageDelt = CalculatePlayerDamage(timeTaken, wordCount);
+        PlayAnim(playerAnimator, "Base Layer.playerattack");
         DealDamageTo(damageDelt, currentBattler.gameObject);
 
         CheckWhosTurnAndSwitch();
@@ -97,8 +112,10 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    public void GivePlayerWordToType() // Then check if the battler died
+    public IEnumerator GivePlayerWordToType() // Then check if the battler died
     {
+        float waitTime = 1.2f;
+        yield return new WaitForSeconds(waitTime);
         wordGiver.GenerateWordChallenge();
     }
 
@@ -112,7 +129,7 @@ public class BattleManager : MonoBehaviour
         isPlayersTurn = !isPlayersTurn;
         if (isPlayersTurn)
         {
-            GivePlayerWordToType();
+            StartCoroutine(GivePlayerWordToType());
         }
         else
         {
@@ -136,6 +153,11 @@ public class BattleManager : MonoBehaviour
         return damageDelt;
         
 
+    }
+
+    void PlayAnim(Animator animator, string animationName)
+    {
+        animator.Play(animationName, 0, 0);
     }
 
 
