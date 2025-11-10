@@ -1967,6 +1967,7 @@ GameObject:
   - component: {fileID: 984581819}
   - component: {fileID: 984581818}
   - component: {fileID: 984581817}
+  - component: {fileID: 984581820}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2016,6 +2017,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &984581820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984581816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f7dde4c6cb6fa48b9318bddd68d8ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1042463451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,6 +2150,7 @@ Transform:
   - {fileID: 291795817}
   - {fileID: 2070402961}
   - {fileID: 837345648}
+  - {fileID: 1485693142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1229789682
@@ -2452,6 +2466,7 @@ MonoBehaviour:
   - {fileID: 503537211}
   - {fileID: 291795816}
   - {fileID: 837345647}
+  - {fileID: 1485693141}
   nodeImage: {fileID: 21300000, guid: 43a929d5806622e45867b55d2e8cfb84, type: 3}
   sceneText: You are in the jungle... What do you want to do?
 --- !u!4 &1429951454
@@ -2661,6 +2676,55 @@ MonoBehaviour:
   commandInput: finish battle
   outputLine: 
   transitionNode: {fileID: 0}
+--- !u!1 &1485693140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1485693142}
+  - component: {fileID: 1485693141}
+  m_Layer: 0
+  m_Name: LootBanana
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1485693141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485693140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d51d2b0c8ae7043b2774363c9626a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: 
+  outputLine: 
+  transitionNode: {fileID: 0}
+  lootableItem: {fileID: 11400000, guid: e6674b92d4e85e34eb33fb7c8138f727, type: 2}
+  amount: 7
+--- !u!4 &1485693142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485693140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1206457770}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1496144665
 GameObject:
   m_ObjectHideFlags: 0

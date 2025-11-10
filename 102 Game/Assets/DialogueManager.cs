@@ -21,12 +21,12 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.RightShift))
         {
             FinishLine();
         }
     }
-
+    
     public IEnumerator SlowType(string line)
     {
         textbox.text = string.Empty;

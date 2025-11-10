@@ -40,15 +40,11 @@ public class CommandProcessor : MonoBehaviour
 
     public void CheckCommonCommands(string command)
     {
-        if (command.ToLower() == "next" && DialogueManager.instance.currentLine != "")
+        if (command.ToLower() == "next")
         {
             DialogueManager.instance.PlayLine(currentNode.sceneText);
             
 
-        }
-        else if (command.ToLower() == "start" && DialogueManager.instance.currentLine == "")
-        {
-            DialogueManager.instance.PlayLine(currentNode.sceneText);
         }
     }
 
