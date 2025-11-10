@@ -4,6 +4,16 @@ using System.Collections.Generic;
 public class PlayerInventory : MonoBehaviour
 {
     Dictionary<Items, int> inventoryItems = new Dictionary<Items, int>();
+    public InventoryUIBuilder inventoryUIBuilder;
+
+    public List<Items> testItems = new List<Items>();
+    private void Start()
+    {
+        foreach (Items item in testItems)
+        {
+            AddItemToInventory(item, 2);
+        }
+    }
 
     public void AddItemToInventory(Items item, int amount)
     {
@@ -16,9 +26,7 @@ public class PlayerInventory : MonoBehaviour
             inventoryItems[item] = amount;
         }
 
-        // inventory ui builder
-
-        print("looted");
+        inventoryUIBuilder.CreateAllItemsUIFromInventory(inventoryItems);
     }
 
 
