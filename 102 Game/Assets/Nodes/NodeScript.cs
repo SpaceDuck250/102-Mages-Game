@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.UI;
 
 public class NodeScript : MonoBehaviour
 {
@@ -8,9 +7,15 @@ public class NodeScript : MonoBehaviour
 
     public Sprite nodeImage;
 
-    //public Battler battler;
-
     public string sceneText;
+
+    public void SetNodeToCurrentNode()
+    {
+        CommandProcessor.instance.currentNode = this;
+
+        UIManager uiManager = GameManager.instance.uiManager;
+        uiManager.UpdateCurrentNodeImage(nodeImage);
+    }
 
     public void CheckChoices(string input)
     {

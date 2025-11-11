@@ -20,8 +20,8 @@ public class LootAction : Action
 
     void SetupCommand()
     {
-        commandInput = "loot " + lootableItem.name;
-        outputLine = "You looted " + lootableItem.name + " " + amount + "x";
+        commandInput = $"loot {lootableItem.itemName}";
+        outputLine = $"You looted {lootableItem.itemName} {amount}x";
     }
 
 }

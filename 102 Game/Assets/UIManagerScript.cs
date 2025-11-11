@@ -9,14 +9,13 @@ public class UIManager : MonoBehaviour
     public Image battlerImageComponent;
     public Image fightSceneImageComponent;
     public Image playerImageComponent;
-
     [SerializeField] GameObject battlePanel;
-
     [SerializeField] TextMeshProUGUI promptTextBox;
 
     PlayerScript player;
     BattleManager battleManager;
 
+    public Image currentNodeImageComponent;
     public TMP_InputField inputField;
 
     private void Start()
@@ -75,5 +74,10 @@ public class UIManager : MonoBehaviour
     {
         inputField.text = "";
         inputField.ActivateInputField();
+    }
+
+    public void UpdateCurrentNodeImage(Sprite newImage)
+    {
+        currentNodeImageComponent.sprite = newImage;
     }
 }

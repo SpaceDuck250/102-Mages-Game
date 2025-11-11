@@ -31,6 +31,7 @@ public abstract class Action : MonoBehaviour
             return;
         }
 
-        CommandProcessor.instance.currentNode = transitionNode;
+        transitionNode.SetNodeToCurrentNode();
+   
     }
 }

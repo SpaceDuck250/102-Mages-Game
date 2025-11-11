@@ -14,7 +14,7 @@ public class Battle : Action
         bmanager = BattleManager.instance;
 
         battlerName = heldBattler.battlerName;
-        commandInput = "Battle " + battlerName;
+        commandInput = $"battle {battlerName}";
     }
 
     public override void DoAction()
@@ -30,6 +30,7 @@ public class Battle : Action
         bmanager.CommenceBattle(heldBattler);
 
         heldBattler.SetupAfterBattleNode(cprocessor.currentNode);
-        cprocessor.currentNode = heldBattler.gameObject.transform.Find("AfterBattleNode").GetComponent<NodeScript>();
+        NodeScript newNode = heldBattler.gameObject.transform.Find("AfterBattleNode").GetComponent<NodeScript>();
+        newNode.SetNodeToCurrentNode();
     }
 }

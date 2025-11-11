@@ -15,36 +15,32 @@ public class CommandProcessor : MonoBehaviour
     {
         instance = this;
         wordGiver = GameManager.instance.wordGiver;
-
     }
 
     private void Start()
     {
-        imageDisplay.sprite = currentNode.nodeImage;
+        currentNode.SetNodeToCurrentNode();
     }
 
     public void EnterCommand(string command)
     {
+        string cleanedUpCommand = command.Trim().ToLower();
+
         if (battleMode)
         {
-            wordGiver.CheckIfCommandMatchesWord(command);
-            //BattleManager.instance.CommenceBattle(currentNode.battler);
+            wordGiver.CheckIfCommandMatchesWord(cleanedUpCommand);
             return;
         }
 
-        CheckCommonCommands(command);
-        currentNode.CheckChoices(command);
-
-        imageDisplay.sprite = currentNode.nodeImage;
+        CheckCommonCommands(cleanedUpCommand);
+        currentNode.CheckChoices(cleanedUpCommand);
     }
 
     public void CheckCommonCommands(string command)
     {
-        if (command.ToLower() == "next")
+        if (command == "next")
         {
             DialogueManager.instance.PlayLine(currentNode.sceneText);
-            
-
         }
     }
 

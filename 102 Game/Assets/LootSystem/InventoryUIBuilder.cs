@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 
 public class InventoryUIBuilder : MonoBehaviour
 {
@@ -28,9 +27,6 @@ public class InventoryUIBuilder : MonoBehaviour
             CreateItemUI(actualItem, itemAmount, xIndex, yIndex);
 
             IncrementIndexes(ref xIndex, ref yIndex);
-
-            print(xIndex + " " + yIndex);
-
         }
 
     }
@@ -48,7 +44,7 @@ public class InventoryUIBuilder : MonoBehaviour
         newItemImageComponent.sprite = item.itemSprite;
 
         TextMeshProUGUI amountText = newItem.transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
-        amountText.text = amount + "x";
+        amountText.text = $"{amount}x";
 
         newItem.SetActive(true);
     }
