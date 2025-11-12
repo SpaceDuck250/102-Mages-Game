@@ -21,6 +21,9 @@ public abstract class Action : MonoBehaviour
 
     public virtual void SaySomething()
     {
+        UIManager uiManager = GameManager.instance.uiManager;
+        uiManager.CloseDialoguePageCounter();
+
         DialogueManager.instance.PlayLine(outputLine);
     }
 
@@ -31,7 +34,9 @@ public abstract class Action : MonoBehaviour
             return;
         }
 
+        NodeScript currentNode = CommandProcessor.instance.currentNode;
+        currentNode.LeaveNode();
+
         transitionNode.SetNodeToCurrentNode();
-   
     }
 }

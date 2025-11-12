@@ -18,6 +18,8 @@ public class UIManager : MonoBehaviour
     public Image currentNodeImageComponent;
     public TMP_InputField inputField;
 
+    public TextMeshProUGUI dialoguePageCounter;
+
     private void Start()
     {
         player = GameManager.instance.player;
@@ -40,7 +42,7 @@ public class UIManager : MonoBehaviour
             battlerImageComponent.sprite = battlerImage;
             fightSceneImageComponent.sprite = fightSceneImage;
         }
-        
+
     }
 
     public void CloseBattlePanel()
@@ -79,5 +81,19 @@ public class UIManager : MonoBehaviour
     public void UpdateCurrentNodeImage(Sprite newImage)
     {
         currentNodeImageComponent.sprite = newImage;
+    }
+
+    public void CloseDialoguePageCounter()
+    {
+        dialoguePageCounter.gameObject.SetActive(false);
+    }
+
+    public void SetDialoguePageCounter(int currentIndex, int maxIndex)
+    {
+        dialoguePageCounter.gameObject.SetActive(true);
+
+        int correctedIndex = currentIndex + 1;
+        string pageCounterText = $"{correctedIndex} / {maxIndex}";
+        dialoguePageCounter.text = pageCounterText;
     }
 }

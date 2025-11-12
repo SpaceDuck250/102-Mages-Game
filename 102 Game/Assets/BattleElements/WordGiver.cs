@@ -57,7 +57,7 @@ public class WordGiver : MonoBehaviour
 
         challengeStarted = true;
         reachedDeadline = false;
-        UImanager.SetPromptTextTo("Please type: " + wordsAskedToType);
+        UImanager.SetPromptTextTo($"Please type: {wordsAskedToType}");
         print(wordsAskedToType);
     }
 

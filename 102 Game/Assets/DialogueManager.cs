@@ -5,8 +5,6 @@ using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
-    
-
     public string currentLine;
     public TextMeshProUGUI textbox;
 
@@ -29,11 +27,14 @@ public class DialogueManager : MonoBehaviour
     
     public IEnumerator SlowType(string line)
     {
-        textbox.text = string.Empty;
-        foreach (char c in line.ToCharArray())
+        if (line != null)
         {
-            textbox.text += c;
-            yield return new WaitForSeconds(waitTime);
+            textbox.text = string.Empty;
+            foreach (char c in line.ToCharArray())
+            {
+                textbox.text += c;
+                yield return new WaitForSeconds(waitTime);
+            }
         }
     }
 

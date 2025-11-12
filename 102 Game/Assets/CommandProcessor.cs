@@ -5,7 +5,6 @@ public class CommandProcessor : MonoBehaviour
 {
     public static CommandProcessor instance;
     WordGiver wordGiver;
-    public Image imageDisplay;
 
     public NodeScript currentNode;
 
@@ -40,7 +39,9 @@ public class CommandProcessor : MonoBehaviour
     {
         if (command == "next")
         {
-            DialogueManager.instance.PlayLine(currentNode.sceneText);
+            NodeDialogueSender nodeDialogueSender = GameManager.instance.nodeDialogueSender;
+            string dialogueLine = nodeDialogueSender.SendDialogueLineAndIncrement(currentNode);
+            DialogueManager.instance.PlayLine(dialogueLine);
         }
     }
 
