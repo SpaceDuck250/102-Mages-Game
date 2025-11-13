@@ -281,6 +281,7 @@ MonoBehaviour:
   - You are in Yew Nork... How will you get home?
   visitedAlready: 0
   endlessTypeOfNode: 0
+  seenAllLinesOfDialogue: 0
 --- !u!4 &48175898
 Transform:
   m_ObjectHideFlags: 0
@@ -2569,6 +2570,7 @@ MonoBehaviour:
   nodeTexts: []
   visitedAlready: 0
   endlessTypeOfNode: 0
+  seenAllLinesOfDialogue: 0
 --- !u!1 &960844676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,6 +2945,7 @@ MonoBehaviour:
   - The ape got scared and fled
   visitedAlready: 0
   endlessTypeOfNode: 0
+  seenAllLinesOfDialogue: 0
 --- !u!1 &1319505181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3136,6 +3139,7 @@ MonoBehaviour:
   - its monday.. which means school again
   visitedAlready: 0
   endlessTypeOfNode: 1
+  seenAllLinesOfDialogue: 0
 --- !u!4 &1423942353
 Transform:
   m_ObjectHideFlags: 0
@@ -3189,6 +3193,7 @@ MonoBehaviour:
   - apparently because you thought a vacation to the jungle would be fun
   visitedAlready: 0
   endlessTypeOfNode: 0
+  seenAllLinesOfDialogue: 0
 --- !u!4 &1429951454
 Transform:
   m_ObjectHideFlags: 0
@@ -3748,7 +3753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLine: 
   textbox: {fileID: 1538385467}
-  waitTime: 0.1
+  waitTime: 0.05
 --- !u!4 &1539560875
 Transform:
   m_ObjectHideFlags: 0
@@ -4979,6 +4984,7 @@ MonoBehaviour:
   - Do you eat it or keep it for school?
   visitedAlready: 0
   endlessTypeOfNode: 0
+  seenAllLinesOfDialogue: 0
 --- !u!1 &2119156886
 GameObject:
   m_ObjectHideFlags: 0

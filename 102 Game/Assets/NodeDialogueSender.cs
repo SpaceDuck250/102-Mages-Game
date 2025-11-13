@@ -14,7 +14,7 @@ public class NodeDialogueSender : MonoBehaviour
 
     public string SendDialogueLineAndIncrement(NodeScript node)
     {
-        if (node.visitedAlready)
+        if (node.dontDisplayDialogueLines)
         {
             return "";
         }
@@ -45,9 +45,25 @@ public class NodeDialogueSender : MonoBehaviour
     void TryIncrementing(NodeScript node)
     {
         dialogueIndexCounter++;
+
+        CheckIfAllLinesOfDialogueAreRead(node);
+
         if (dialogueIndexCounter == node.nodeTexts.Count)
         {
             dialogueIndexCounter = 0;
         }
+    }
+
+    void CheckIfAllLinesOfDialogueAreRead(NodeScript node)
+    {
+        if (dialogueIndexCounter == node.nodeTexts.Count - 1)
+        {
+            node.seenAllLinesOfDialogue = true;
+        }
+    }
+
+    public void LeaveCurrentNode()
+    {
+        selectedNode = null;
     }
 }

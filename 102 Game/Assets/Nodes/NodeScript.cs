@@ -10,8 +10,11 @@ public class NodeScript : MonoBehaviour
     public List<string> nodeTexts = new List<string>();
 
     bool initializedActions = false;
-    public bool visitedAlready = false;
+    public bool dontDisplayDialogueLines = false;
     public bool endlessTypeOfNode = false;
+
+    // make sure the player has seen all the lines of dialogue before stopping it
+    public bool seenAllLinesOfDialogue = false;
 
     public void SetNodeToCurrentNode()
     {
@@ -38,12 +41,15 @@ public class NodeScript : MonoBehaviour
 
     public void LeaveNode()
     {
-        if (endlessTypeOfNode)
+        NodeDialogueSender nodeDialogueSender = GameManager.instance.nodeDialogueSender;
+        nodeDialogueSender.LeaveCurrentNode();
+
+        if (endlessTypeOfNode || !seenAllLinesOfDialogue)
         {
             return;
         }
 
-        visitedAlready = true;
+        dontDisplayDialogueLines = true;
         nodeTexts.Clear();
     }
 
