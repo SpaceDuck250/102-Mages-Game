@@ -26,7 +26,7 @@ public class NodeScript : MonoBehaviour
         uiManager.UpdateCurrentNodeImage(nodeImage);
 
         HelpPanelScript helpPanelScript = GameManager.instance.uiManager.helpPanelScript;
-        helpPanelScript.CloseHelpPanel();
+        helpPanelScript.UpdateHelpPanel();
     }
 
     public bool CheckIfEnteredChoicesAndExecute(string input)

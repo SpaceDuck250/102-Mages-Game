@@ -48,21 +48,48 @@ public class HelpPanelScript : MonoBehaviour
     string MakeActionText(List<Action> possibleActions)
     {
         string outputText = "";
+
+        bool readAllLines = commandProcessor.currentNode.seenAllLinesOfDialogue;
+        if (readAllLines)
+        {
+            outputText += AddActionsText(possibleActions);
+        }
+
+        outputText += AddCommonCommandsText();
+
+        return outputText;
+    }
+
+    string AddCommonCommandsText()
+    {
+        string commonCommandsText = "";
+
+        NodeScript node = commandProcessor.currentNode;
+        if (!node.dontDisplayDialogueLines)
+        {
+            commonCommandsText = string.Concat(commonCommandsText, "next \n");
+        }
+
+        commonCommandsText = string.Concat(commonCommandsText, "open inv");
+
+        return commonCommandsText;
+    }
+
+    string AddActionsText(List<Action> possibleActions)
+    {
+        string actionsText = "";
+
         foreach (Action action in possibleActions)
         {
             string actionCommandInput = action.commandInput;
             actionCommandInput = actionCommandInput.ToLower();
 
-            outputText = string.Concat(outputText, $"{actionCommandInput} \n");
+            actionsText = string.Concat(actionsText, $"{actionCommandInput} \n");
         }
 
-        NodeScript node = commandProcessor.currentNode;
-        if (!node.dontDisplayDialogueLines)
-        {
-            outputText = string.Concat(outputText, "next");
-        }
+        return actionsText;
 
-        return outputText;
     }
+
 
 }

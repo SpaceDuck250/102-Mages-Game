@@ -99,4 +99,9 @@ public class UIManager : MonoBehaviour
         dialoguePageCounter.text = pageCounterText;
     }
 
+    public void OpenInventory()
+    {
+        helpPanelScript.gameObject.SetActive(false);
+    }
+
 }
