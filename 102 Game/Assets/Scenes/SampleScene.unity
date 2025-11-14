@@ -2425,6 +2425,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793210425}
   m_CullTransparentMesh: 1
+--- !u!1 &811072344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 811072345}
+  - component: {fileID: 811072346}
+  m_Layer: 0
+  m_Name: GameInitializer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &811072345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811072344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2077029408}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &811072346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811072344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c6eb15691fe4047ac3acbed66c5b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialGameLine: Type "next" whenever you want to continue...
 --- !u!1 &837345646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,7 +3132,7 @@ GameObject:
   - component: {fileID: 962224320}
   - component: {fileID: 962224319}
   m_Layer: 5
-  m_Name: title (1)
+  m_Name: desc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3132,7 +3177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: type "close help" to close panel or click i icon again...
+  m_text: type "close help" to close help panel...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3540,7 +3585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1136137330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4289,6 +4334,11 @@ MonoBehaviour:
   nodeTexts:
   - You wake up to a terrible morning...
   - its monday.. which means school again
+  - but you remembered in your dream that you can type "open help" to check possible
+    commands...
+  - oh yeah and right shift if you want to speed up text...
+  - 'one last thing.. use "next" to continue and start the dialogue... '
+  - anyways... your mom calls you downstairs for breakfast
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 0
   seenAllLinesOfDialogue: 0
@@ -6326,6 +6376,7 @@ Transform:
   - {fileID: 1203426117}
   - {fileID: 81707532}
   - {fileID: 1849202450}
+  - {fileID: 811072345}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2109312151

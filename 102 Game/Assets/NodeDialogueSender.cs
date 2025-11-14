@@ -14,10 +14,10 @@ public class NodeDialogueSender : MonoBehaviour
 
     public string SendDialogueLineAndIncrement(NodeScript node)
     {
-        if (node.dontDisplayDialogueLines)
-        {
-            return "";
-        }
+        //if (node.dontDisplayDialogueLines)
+        //{
+        //    return "";
+        //}
 
         // If we come back to the same node increment, else set counter to 0
         CheckIfReturnedToSameNode(node);

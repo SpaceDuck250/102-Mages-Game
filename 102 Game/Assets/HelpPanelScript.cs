@@ -11,14 +11,6 @@ public class HelpPanelScript : MonoBehaviour
 
     public bool opened = false;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            UpdateHelpPanel();
-        }
-    }
-
     public void UpdateHelpPanel()
     {
         List<Action> possibleActionsList = commandProcessor.currentNode.choices;
@@ -62,6 +54,12 @@ public class HelpPanelScript : MonoBehaviour
             actionCommandInput = actionCommandInput.ToLower();
 
             outputText = string.Concat(outputText, $"{actionCommandInput} \n");
+        }
+
+        NodeScript node = commandProcessor.currentNode;
+        if (!node.dontDisplayDialogueLines)
+        {
+            outputText = string.Concat(outputText, "next");
         }
 
         return outputText;
