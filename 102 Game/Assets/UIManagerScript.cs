@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
 
     public TextMeshProUGUI dialoguePageCounter;
 
+    public HelpPanelScript helpPanelScript;
+
     private void Start()
     {
         player = GameManager.instance.player;
@@ -96,4 +98,5 @@ public class UIManager : MonoBehaviour
         string pageCounterText = $"{correctedIndex} / {maxIndex}";
         dialoguePageCounter.text = pageCounterText;
     }
+
 }

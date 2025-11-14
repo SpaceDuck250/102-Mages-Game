@@ -14,7 +14,7 @@ public class Battle : Action
         bmanager = BattleManager.instance;
 
         battlerName = heldBattler.battlerName;
-        commandInput = $"battle {battlerName}";
+        commandInput = $"fight {battlerName}";
     }
 
     public override void DoAction()

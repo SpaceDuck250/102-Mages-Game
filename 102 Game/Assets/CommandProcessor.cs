@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CommandProcessor : MonoBehaviour
 {
     public static CommandProcessor instance;
+    CommonCommandsScript commonCommands;
     WordGiver wordGiver;
 
     public NodeScript currentNode;
@@ -14,6 +14,7 @@ public class CommandProcessor : MonoBehaviour
     {
         instance = this;
         wordGiver = GameManager.instance.wordGiver;
+        commonCommands = GetComponent<CommonCommandsScript>();
     }
 
     private void Start()
@@ -31,19 +32,21 @@ public class CommandProcessor : MonoBehaviour
             return;
         }
 
-        CheckCommonCommands(cleanedUpCommand);
-        currentNode.CheckChoices(cleanedUpCommand);
+        TryToExecuteCommand(cleanedUpCommand);
+
     }
 
-    public void CheckCommonCommands(string command)
+    void TryToExecuteCommand(string command)
     {
-        if (command == "next")
+        bool isValidCommand = currentNode.CheckIfEnteredChoicesAndExecute(command) || commonCommands.CheckCommonCommands(command, currentNode);
+
+        if (!isValidCommand)
         {
-            NodeDialogueSender nodeDialogueSender = GameManager.instance.nodeDialogueSender;
-            string dialogueLine = nodeDialogueSender.SendDialogueLineAndIncrement(currentNode);
-            DialogueManager.instance.PlayLine(dialogueLine);
+            commonCommands.OutputInvalidCommandText();
         }
     }
+
+
 
 
 

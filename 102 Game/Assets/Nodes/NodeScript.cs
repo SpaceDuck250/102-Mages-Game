@@ -24,9 +24,12 @@ public class NodeScript : MonoBehaviour
 
         UIManager uiManager = GameManager.instance.uiManager;
         uiManager.UpdateCurrentNodeImage(nodeImage);
+
+        HelpPanelScript helpPanelScript = GameManager.instance.uiManager.helpPanelScript;
+        helpPanelScript.CloseHelpPanel();
     }
 
-    public void CheckChoices(string input)
+    public bool CheckIfEnteredChoicesAndExecute(string input)
     {
         foreach (Action choice in choices)
         {
@@ -34,9 +37,13 @@ public class NodeScript : MonoBehaviour
             {
                 choice.DoAction();
                 choice.SaySomething();
+
+                return true;
                 
             }
         }
+
+        return false;
     }
 
     public void LeaveNode()

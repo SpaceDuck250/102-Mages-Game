@@ -15,8 +15,8 @@ public class Battler : MonoBehaviour
 
     public void SetupAfterBattleNode(NodeScript previousNode)
     {
-        Action action = gameObject.transform.Find("ReturnAction").GetComponent<Action>();
-        action.transitionNode = previousNode;
+        //Action action = gameObject.transform.Find("ReturnAction").GetComponent<Action>();
+        //action.transitionNode = previousNode;
     }
 
     public string ChooseRandomLine(List<string> lines)
