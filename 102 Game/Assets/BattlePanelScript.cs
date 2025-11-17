@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class BattlePanelScript : MonoBehaviour
     public Image fightSceneImageComponent;
     public Image playerImageComponent;
 
+    public TextMeshProUGUI promptTextBox;
+
     public GameObject battlePanel;
 
     BattleManager battleManager;
@@ -17,13 +20,16 @@ public class BattlePanelScript : MonoBehaviour
     {
         battleManager = GameManager.instance.battleManager;
         battleManager.onBattleStart += SetupBattlePanel;
+        battleManager.onBattleEnd += CloseBattlePanel;
     }
+
 
     private void OnDestroy()
     {
         battleManager.onBattleStart -= SetupBattlePanel;
-    }
+        battleManager.onBattleEnd -= CloseBattlePanel;
 
+    }
 
     private void SetupBattlePanel(Battler currentBattler)
     {
@@ -43,7 +49,12 @@ public class BattlePanelScript : MonoBehaviour
         }
     }
 
-    public void CloseBattlePanel()
+    public void SetPromptTextTo(string promptText)
+    {
+        promptTextBox.text = promptText;
+    }
+
+    public void CloseBattlePanel(Battler currentBattler)
     {
         battlePanel.SetActive(false);
     }

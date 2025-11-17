@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class NodeScript : MonoBehaviour
 {
@@ -20,13 +21,12 @@ public class NodeScript : MonoBehaviour
     {
         GetAllActionsFromChildren();
 
-        CommandProcessor.instance.currentNode = this;
+        CommandProcessor commandProcessor = CommandProcessor.instance;
+        commandProcessor.currentNode = this;
+        commandProcessor.onNewNodeEnter?.Invoke(this);
 
-        UIManager uiManager = GameManager.instance.uiManager;
-        uiManager.UpdateCurrentNodeImage(nodeImage);
-
-        HelpPanelScript helpPanelScript = GameManager.instance.uiManager.helpPanelScript;
-        helpPanelScript.UpdateHelpPanel();
+        //UIManager uiManager = GameManager.instance.uiManager;
+        //uiManager.UpdateCurrentNodeImage(nodeImage);
     }
 
     public bool CheckIfEnteredChoicesAndExecute(string input)

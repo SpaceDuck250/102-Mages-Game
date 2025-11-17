@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CommandProcessor : MonoBehaviour
@@ -7,6 +8,7 @@ public class CommandProcessor : MonoBehaviour
     WordGiver wordGiver;
 
     public NodeScript currentNode;
+    public Action<NodeScript> onNewNodeEnter;
 
     public bool battleMode = false;
 

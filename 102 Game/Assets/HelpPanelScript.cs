@@ -11,6 +11,22 @@ public class HelpPanelScript : MonoBehaviour
 
     public bool opened = false;
 
+    private void Start()
+    {
+        commandProcessor.onNewNodeEnter += OnNewNodeEnter;
+    }
+
+    private void OnDestroy()
+    {
+        commandProcessor.onNewNodeEnter -= OnNewNodeEnter;
+
+    }
+
+    public void OnNewNodeEnter(NodeScript currentNode)
+    {
+        UpdateHelpPanel();
+    }
+
     public void UpdateHelpPanel()
     {
         List<Action> possibleActionsList = commandProcessor.currentNode.choices;
@@ -19,22 +35,8 @@ public class HelpPanelScript : MonoBehaviour
         possibleActionsText.text = outputText;
     }
 
-    public void OpenCloseHelpPanel()
-    {
-        if (opened)
-        {
-            CloseHelpPanel();
-        }
-        else
-        {
-            OpenHelpPanel();
-        }
-
-    }
-
     public void CloseHelpPanel()
     {
-        opened = false;
         helpPanel.SetActive(false);
     }
 

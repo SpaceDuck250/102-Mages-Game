@@ -37,9 +37,8 @@ public class CommonCommandsScript : MonoBehaviour
         }
         else if (command == "open inv")
         {
-
-            UIManager uiManager = GameManager.instance.uiManager;
-            uiManager.OpenInventory();
+            HelpPanelScript helpPanelScript = GameManager.instance.uiManager.helpPanelScript;
+            helpPanelScript.CloseHelpPanel();
 
             return true;
 
@@ -53,8 +52,11 @@ public class CommonCommandsScript : MonoBehaviour
         string invalidText = "Invalid command, type \"open help\" to see what commands you can execute...";
         DialogueManager.instance.PlayLine(invalidText);
 
-        UIManager uiManager = GameManager.instance.uiManager;
-        uiManager.CloseDialoguePageCounter();
+        //UIManager uiManager = GameManager.instance.uiManager;
+        //uiManager.CloseDialoguePageCounter();
+
+        PageCounterScript pageCounterScript = GameManager.instance.uiManager.pageCounterScript;
+        pageCounterScript.CloseDialoguePageCounter();
 
     }
 }

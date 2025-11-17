@@ -39,7 +39,11 @@ public class NodeDialogueSender : MonoBehaviour
         }
 
         int maxIndex = node.nodeTexts.Count;
-        uiManager.SetDialoguePageCounter(dialogueIndexCounter, maxIndex);
+
+        //uiManager.SetDialoguePageCounter(dialogueIndexCounter, maxIndex);
+
+        PageCounterScript pageCounterScript = uiManager.pageCounterScript;
+        pageCounterScript.SetDialoguePageCounter(dialogueIndexCounter, maxIndex);
     }
 
     void TryIncrementing(NodeScript node)

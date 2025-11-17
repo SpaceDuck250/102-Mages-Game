@@ -5,16 +5,12 @@ using System;
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager instance;
-    UIManager UImanager;
     public PlayerScript player;
     WordGiver wordGiver;
 
     public Battler currentBattler;
 
     public bool isPlayersTurn;
-
-    public Animator battlerAnimator;
-    public Animator playerAnimator;
 
     public event Action<Battler> onPlayerWin;
     public event Action<Battler> onPlayerLose;
@@ -29,7 +25,6 @@ public class BattleManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        UImanager = GameManager.instance.uiManager;
         player = GameManager.instance.player;
         wordGiver = GameManager.instance.wordGiver;
     }
@@ -42,7 +37,6 @@ public class BattleManager : MonoBehaviour
         isPlayersTurn = true;
 
         onBattleStart?.Invoke(currentBattler);
-        //UImanager.SetupBattlePanel();
 
         StartCoroutine(GivePlayerWordToType()); // This will start the cycle back and forth between the player and the battler
     }
@@ -60,13 +54,13 @@ public class BattleManager : MonoBehaviour
     {
         currentBattler = null;
         CommandProcessor.instance.battleMode = false;
-        UImanager.CloseBattlePanel();
-        print("Finished");
+
+        onBattleEnd?.Invoke(currentBattler);
     }
 
     public void OnBattlerDeath() // Win
     {
-        DialogueManager.instance.PlayLine("You have won the battle against " + currentBattler.battlerName);
+        onPlayerWin?.Invoke(currentBattler);
 
         Battle battleComponent = currentBattler.gameObject.GetComponent<Battle>();
         NodeScript winNode = battleComponent.winNode;
@@ -77,7 +71,7 @@ public class BattleManager : MonoBehaviour
 
     public void OnPlayerDeath() // Lose
     {
-        DialogueManager.instance.PlayLine("You have lost the battle to " + currentBattler.battlerName);
+        onPlayerLose?.Invoke(currentBattler);
 
         Battle battleComponent = currentBattler.gameObject.GetComponent<Battle>();
         NodeScript lostNode = battleComponent.lostNode;
@@ -167,14 +161,5 @@ public class BattleManager : MonoBehaviour
 
         print("Damage delt " + damageDelt);
         return damageDelt;
-        
-
     }
-
-    void PlayAnim(Animator animator, string animationName)
-    {
-        animator.Play(animationName, 0, 0);
-    }
-
-
 }

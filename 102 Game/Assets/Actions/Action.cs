@@ -21,8 +21,8 @@ public abstract class Action : MonoBehaviour
 
     public virtual void SaySomething()
     {
-        UIManager uiManager = GameManager.instance.uiManager;
-        uiManager.CloseDialoguePageCounter();
+        PageCounterScript pageCounterScript = GameManager.instance.uiManager.pageCounterScript;
+        pageCounterScript.CloseDialoguePageCounter();
 
         DialogueManager.instance.PlayLine(outputLine);
     }

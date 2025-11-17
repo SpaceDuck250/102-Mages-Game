@@ -7,6 +7,8 @@ public class WordGiver : MonoBehaviour
     int wordCount;
 
     UIManager UImanager;
+    BattlePanelScript battlePanelScript;
+
     [SerializeField] TimerScript timerScript;
 
     public bool timerOn;
@@ -19,6 +21,7 @@ public class WordGiver : MonoBehaviour
     private void Awake()
     {
         UImanager = GameManager.instance.uiManager;
+        battlePanelScript = GameManager.instance.uiManager.battlePanelScript;
     }
 
     private void Update()
@@ -55,7 +58,8 @@ public class WordGiver : MonoBehaviour
 
         challengeStarted = true;
         reachedDeadline = false;
-        UImanager.SetPromptTextTo($"Please type: {wordsAskedToType}");
+
+        battlePanelScript.SetPromptTextTo($"Please type: {wordsAskedToType}");
     }
 
     public float CalculateTimeGiven(int wordCount)
@@ -86,7 +90,7 @@ public class WordGiver : MonoBehaviour
     {
         timerOn = false;
         challengeStarted = false;
-        UImanager.SetPromptTextTo("");
+        battlePanelScript.SetPromptTextTo("");
 
         timerScript.CloseTimer();
         float timeTaken = timerStartValue - timer;
