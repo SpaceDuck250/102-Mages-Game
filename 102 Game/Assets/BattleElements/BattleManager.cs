@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class BattleManager : MonoBehaviour
 {
@@ -15,6 +16,16 @@ public class BattleManager : MonoBehaviour
     public Animator battlerAnimator;
     public Animator playerAnimator;
 
+    public event Action<Battler> onPlayerWin;
+    public event Action<Battler> onPlayerLose;
+
+    public event Action<float, Battler> onPlayerAttack;
+    public event Action<float, Battler> onEnemyAttack;
+
+    public event Action<Battler> onBattleStart;
+    public event Action<Battler> onBattleEnd;
+
+
     private void Awake()
     {
         instance = this;
@@ -23,19 +34,15 @@ public class BattleManager : MonoBehaviour
         wordGiver = GameManager.instance.wordGiver;
     }
 
-    private void Start()
-    {
-        playerAnimator = UImanager.playerImageComponent.GetComponent<Animator>();
-        battlerAnimator = UImanager.battlerImageComponent.GetComponent<Animator>();
-    }
-
     public void CommenceBattle(Battler newBattler)
     {
         currentBattler = newBattler;
         RevivePlayerAndBattler();
 
         isPlayersTurn = true;
-        UImanager.SetupBattlePanel();
+
+        onBattleStart?.Invoke(currentBattler);
+        //UImanager.SetupBattlePanel();
 
         StartCoroutine(GivePlayerWordToType()); // This will start the cycle back and forth between the player and the battler
     }
@@ -83,11 +90,11 @@ public class BattleManager : MonoBehaviour
     {
         float waitTime = 1.2f;
         yield return new WaitForSeconds(waitTime);
-        PlayAnim(battlerAnimator, "Base Layer.battlerattack");
 
-
-        float damageDelt = currentBattler.PickDamageValue();  
+        float damageDelt = currentBattler.PickDamageValue();
         DealDamageTo(damageDelt, player.gameObject);
+
+        onEnemyAttack?.Invoke(damageDelt, currentBattler);
 
         CheckWhosTurnAndSwitch();
     }
@@ -95,8 +102,10 @@ public class BattleManager : MonoBehaviour
     public void LetPlayerAttack(float timeTaken, int wordCount)
     {
         float damageDelt = CalculatePlayerDamage(timeTaken, wordCount);
-        PlayAnim(playerAnimator, "Base Layer.playerattack");
         DealDamageTo(damageDelt, currentBattler.gameObject);
+
+        onPlayerAttack?.Invoke(damageDelt, currentBattler);
+
 
         CheckWhosTurnAndSwitch();
     }
@@ -105,7 +114,6 @@ public class BattleManager : MonoBehaviour
     {
         HealthScript healthComponent = obj.GetComponent<HealthScript>();
         healthComponent.TakeDamage(damage);
-        UImanager.UpdateBothHealthBars();
 
         if (healthComponent.dead && obj.tag == "Player")
         {

@@ -17,5 +17,7 @@ public class HealthBarScript : MonoBehaviour
     {
         float healthPercentage = health / maxHealth;
         healthSlider.fillAmount = healthPercentage;
+
+        print(healthSlider.fillAmount);
     }
 }
