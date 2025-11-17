@@ -8,6 +8,9 @@ public class Battle : Action
     [SerializeField] Battler heldBattler;
     string battlerName;
 
+    public NodeScript winNode;
+    public NodeScript lostNode;
+
     private void Start()
     {
         cprocessor = CommandProcessor.instance;
@@ -29,8 +32,8 @@ public class Battle : Action
         cprocessor.battleMode = true;
         bmanager.CommenceBattle(heldBattler);
 
-        heldBattler.SetupAfterBattleNode(cprocessor.currentNode);
-        NodeScript newNode = heldBattler.gameObject.transform.Find("AfterBattleNode").GetComponent<NodeScript>();
-        newNode.SetNodeToCurrentNode();
+        //heldBattler.SetupAfterBattleNode(cprocessor.currentNode);
+        //NodeScript newNode = heldBattler.gameObject.transform.Find("AfterBattleNode").GetComponent<NodeScript>();
+        //newNode.SetNodeToCurrentNode();
     }
 }

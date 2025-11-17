@@ -1,7 +1,5 @@
-using TMPro;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class WordGiver : MonoBehaviour
 {
@@ -58,7 +56,6 @@ public class WordGiver : MonoBehaviour
         challengeStarted = true;
         reachedDeadline = false;
         UImanager.SetPromptTextTo($"Please type: {wordsAskedToType}");
-        print(wordsAskedToType);
     }
 
     public float CalculateTimeGiven(int wordCount)
@@ -73,7 +70,6 @@ public class WordGiver : MonoBehaviour
         float timeToRead = 3;
         timeGiven += timeToRead;
 
-        print("Time Given " + timeGiven);
         return timeGiven;
 
     }
@@ -93,9 +89,7 @@ public class WordGiver : MonoBehaviour
         UImanager.SetPromptTextTo("");
 
         timerScript.CloseTimer();
-
         float timeTaken = timerStartValue - timer;
-        print("Time taken " + timeTaken);
 
         BattleManager.instance.LetPlayerAttack(timeTaken, wordCount);
     }

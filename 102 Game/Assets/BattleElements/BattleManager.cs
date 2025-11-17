@@ -57,16 +57,24 @@ public class BattleManager : MonoBehaviour
         print("Finished");
     }
 
-    public void OnBattlerDeath()
+    public void OnBattlerDeath() // Win
     {
         DialogueManager.instance.PlayLine("You have won the battle against " + currentBattler.battlerName);
+
+        Battle battleComponent = currentBattler.gameObject.GetComponent<Battle>();
+        NodeScript winNode = battleComponent.winNode;
+        winNode.SetNodeToCurrentNode();
 
         EndBattle();
     }
 
-    public void OnPlayerDeath()
+    public void OnPlayerDeath() // Lose
     {
         DialogueManager.instance.PlayLine("You have lost the battle to " + currentBattler.battlerName);
+
+        Battle battleComponent = currentBattler.gameObject.GetComponent<Battle>();
+        NodeScript lostNode = battleComponent.lostNode;
+        lostNode.SetNodeToCurrentNode();
 
         EndBattle();
     }
