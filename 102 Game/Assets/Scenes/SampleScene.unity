@@ -209,6 +209,7 @@ Transform:
   m_Children:
   - {fileID: 1646830517}
   - {fileID: 1030105787}
+  - {fileID: 1507067916}
   m_Father: {fileID: 116240828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &12887153
@@ -693,9 +694,11 @@ Transform:
   - {fileID: 1731372738}
   - {fileID: 1010430704}
   - {fileID: 12887152}
+  - {fileID: 516536377}
   - {fileID: 1829380564}
   - {fileID: 4989838}
   - {fileID: 108516280}
+  - {fileID: 1975893591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141467971
@@ -1003,7 +1006,7 @@ MonoBehaviour:
   damageRange:
   - 2
   - 20
-  healthScript: {fileID: 0}
+  healthScript: {fileID: 261775133}
 --- !u!114 &261775135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1893,6 +1896,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1206457770}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &516536376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516536377}
+  - component: {fileID: 516536378}
+  m_Layer: 0
+  m_Name: PissedBillyNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &516536377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516536376}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2707139, y: 0.3992309, z: -0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1176934821}
+  m_Father: {fileID: 116240828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &516536378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516536376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da40d0d8ca7fcd45b23ffa144aa9d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choices: []
+  nodeImage: {fileID: 21300000, guid: 96dfaa65cfb6d444e862b9276fbea99e, type: 3}
+  nodeTexts:
+  - In that case I'll take my anger out on you...
+  - noob...
+  dontDisplayDialogueLines: 0
+  endlessTypeOfNode: 1
+  seenAllLinesOfDialogue: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,9 +3174,7 @@ MonoBehaviour:
   battlePanelScript: {fileID: 1785373638}
   pageCounterScript: {fileID: 881066725}
   helpPanelScript: {fileID: 1099209885}
-  currentNodeUIScript: {fileID: 0}
-  currentNodeImageComponent: {fileID: 1229789683}
-  inputField: {fileID: 2110419599}
+  currentNodeUIScript: {fileID: 881066724}
 --- !u!4 &881066723
 Transform:
   m_ObjectHideFlags: 0
@@ -3848,6 +3902,53 @@ MonoBehaviour:
   commandInput: yes
   outputLine: You went to take a seat but you see a familiar face...
   transitionNode: {fileID: 12887153}
+--- !u!1 &1064489256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1064489257}
+  - component: {fileID: 1064489258}
+  m_Layer: 0
+  m_Name: ClownAroundAction (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1064489257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064489256}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1975893591}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1064489258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064489256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: Clown Around
+  outputLine: You just clowned around
+  transitionNode: {fileID: 0}
 --- !u!1 &1099209881
 GameObject:
   m_ObjectHideFlags: 0
@@ -4128,6 +4229,98 @@ MonoBehaviour:
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 1
   seenAllLinesOfDialogue: 0
+--- !u!1 &1176934820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176934821}
+  - component: {fileID: 1176934824}
+  - component: {fileID: 1176934823}
+  - component: {fileID: 1176934822}
+  m_Layer: 0
+  m_Name: FightBilly (Fight)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1176934821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176934820}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1869938420}
+  m_Father: {fileID: 516536377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1176934822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176934820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e9372b702d0834ab7ab9aca4fe786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 0
+  dead: 0
+--- !u!114 &1176934823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176934820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea1a409c42732a428d4682510acbc99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAttackLines:
+  - rich kid rich kid
+  - gold bars iron cars
+  - golden apple
+  dialogueLines: []
+  battlerName: Billy
+  battlerImage: {fileID: 21300000, guid: 96dfaa65cfb6d444e862b9276fbea99e, type: 3}
+  fightSceneImage: {fileID: 21300000, guid: 0e2ca58174e5f3c48ba0d1f181f3eadd, type: 3}
+  damageRange:
+  - 2
+  - 20
+  healthScript: {fileID: 1176934822}
+--- !u!114 &1176934824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176934820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8ae4a5055bf4783f351ffd6b4b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: 
+  outputLine: 
+  transitionNode: {fileID: 1371693881}
+  heldBattler: {fileID: 1176934823}
+  winNode: {fileID: 1975893592}
+  lostNode: {fileID: 1869938421}
 --- !u!1 &1203426115
 GameObject:
   m_ObjectHideFlags: 0
@@ -5145,6 +5338,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496144665}
   m_CullTransparentMesh: 1
+--- !u!1 &1507067915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1507067916}
+  - component: {fileID: 1507067917}
+  m_Layer: 0
+  m_Name: SayNo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1507067916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507067915}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 12887152}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507067917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507067915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ea5921bd13290479fced1989a764ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: no
+  outputLine: Billy gets angry, now you have no choice but to fight him...
+  transitionNode: {fileID: 516536378}
 --- !u!1 &1538385465
 GameObject:
   m_ObjectHideFlags: 0
@@ -6252,6 +6492,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcc7f3b21b3862419801c2c3be32f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1869938419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1869938420}
+  - component: {fileID: 1869938421}
+  m_Layer: 0
+  m_Name: RestartNode (Lost)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1869938420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869938419}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1951822212}
+  m_Father: {fileID: 1176934821}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1869938421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869938419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da40d0d8ca7fcd45b23ffa144aa9d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choices: []
+  nodeImage: {fileID: 21300000, guid: 6549970bf9babe848856f40a7b6c85f6, type: 3}
+  nodeTexts:
+  - You lost to billy...
+  - He was too rich...
+  dontDisplayDialogueLines: 0
+  endlessTypeOfNode: 1
+  seenAllLinesOfDialogue: 0
 --- !u!1 &1871099620
 GameObject:
   m_ObjectHideFlags: 0
@@ -6346,6 +6639,106 @@ MonoBehaviour:
   commandInput: Clown Around
   outputLine: You just clowned around
   transitionNode: {fileID: 0}
+--- !u!1 &1951822211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951822212}
+  - component: {fileID: 1951822213}
+  m_Layer: 0
+  m_Name: ReturnBack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1951822212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951822211}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1869938420}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1951822213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951822211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ea5921bd13290479fced1989a764ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: try again
+  outputLine: you travelled back in time...
+  transitionNode: {fileID: 12887153}
+--- !u!1 &1975893590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975893591}
+  - component: {fileID: 1975893592}
+  m_Layer: 0
+  m_Name: ArriveSchoolNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1975893591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975893590}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2707139, y: 0.3992309, z: -0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1064489257}
+  m_Father: {fileID: 116240828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1975893592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975893590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da40d0d8ca7fcd45b23ffa144aa9d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choices: []
+  nodeImage: {fileID: 21300000, guid: 0e2ca58174e5f3c48ba0d1f181f3eadd, type: 3}
+  nodeTexts:
+  - The bus stops at the school
+  - time to go to inside the school building...
+  dontDisplayDialogueLines: 0
+  endlessTypeOfNode: 0
+  seenAllLinesOfDialogue: 0
 --- !u!1 &2038622094
 GameObject:
   m_ObjectHideFlags: 0
