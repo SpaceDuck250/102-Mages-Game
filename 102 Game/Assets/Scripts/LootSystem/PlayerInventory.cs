@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class PlayerInventory : MonoBehaviour
 {
-    Dictionary<Items, int> inventoryItems = new Dictionary<Items, int>();
+    public Dictionary<Items, int> inventoryItems = new Dictionary<Items, int>();
     public InventoryUIBuilder inventoryUIBuilder;
 
     public List<Items> testItems = new List<Items>();
@@ -26,7 +26,18 @@ public class PlayerInventory : MonoBehaviour
             inventoryItems[item] = amount;
         }
 
+        int amountLeft = inventoryItems[item];
+        CheckIfNoneLeftAndDestroy(amountLeft, item);
+
         inventoryUIBuilder.CreateAllItemsUIFromInventory(inventoryItems);
+    }
+
+    void CheckIfNoneLeftAndDestroy(int amount, Items item)
+    {
+        if (amount <= 0)
+        {
+            inventoryItems.Remove(item);
+        }
     }
 
 
