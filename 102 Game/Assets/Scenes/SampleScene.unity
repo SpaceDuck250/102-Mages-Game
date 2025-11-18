@@ -888,14 +888,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5411765, g: 0.5411765, b: 0.5411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -996,8 +996,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.13501, y: 0.58}
+  m_SizeDelta: {x: 99.924, y: 100.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &217747873
 MonoBehaviour:
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   dialogueLines: []
   battlerName: William
   battlerImage: {fileID: 21300000, guid: 053ddd1a5a74707488ba2048f6688d9d, type: 3}
-  fightSceneImage: {fileID: 21300000, guid: 0e2ca58174e5f3c48ba0d1f181f3eadd, type: 3}
+  fightSceneImage: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   damageRange:
   - 2
   - 20
@@ -2158,8 +2158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176.23001, y: -70.01}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 176.23, y: -65.147}
+  m_SizeDelta: {x: 100, y: 102.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506939896
 MonoBehaviour:
@@ -2302,14 +2302,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5411765, g: 0.5411765, b: 0.5411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2555,7 +2555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &582650678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3618,14 +3618,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.14150941, b: 0.0027746859, a: 1}
+  m_Color: {r: 0.5411765, g: 0.5411765, b: 0.5411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4584,7 +4584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4879,7 +4879,7 @@ MonoBehaviour:
   dialogueLines: []
   battlerName: Billy
   battlerImage: {fileID: 21300000, guid: cb006aaf3c9d96d49912febe126ff4f3, type: 3}
-  fightSceneImage: {fileID: 21300000, guid: 0e2ca58174e5f3c48ba0d1f181f3eadd, type: 3}
+  fightSceneImage: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   damageRange:
   - 2
   - 20
@@ -5053,17 +5053,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229789682}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9725, y: 0.9725, z: 1}
+  m_LocalScale: {x: 0.9725, y: 0.9727, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1828488147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176.23, y: -70.01}
-  m_SizeDelta: {x: 447.53, y: 309.99}
+  m_AnchoredPosition: {x: 176.2888, y: -68.41}
+  m_SizeDelta: {x: 447.53, y: 307.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1246874238
 GameObject:
@@ -5658,7 +5658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9c7c770ad370d4ca19931b8b597c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentNode: {fileID: 1423942352}
+  currentNode: {fileID: 12887153}
   battleMode: 0
 --- !u!4 &1462892241
 Transform:
@@ -7522,14 +7522,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8231,14 +8231,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5411765, g: 0.5411765, b: 0.5411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
