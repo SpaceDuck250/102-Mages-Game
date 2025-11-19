@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using System;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class DialogueManager : MonoBehaviour
     public float waitTime;
 
     public static DialogueManager instance;
+
+    public event System.Action onType;
+    public System.Action onTypeEnd;
+
 
     private void Awake()
     {
@@ -34,12 +39,14 @@ public class DialogueManager : MonoBehaviour
                 textbox.text += c;
                 yield return new WaitForSeconds(waitTime);
             }
+
+            onTypeEnd?.Invoke();
         }
     }
 
     public void PlayLine(string line)
     {
-        if (currentLine == line)
+        if (currentLine == line || line == string.Empty)
         {
             Debug.Log("Already wrote next before");
             return;
@@ -50,6 +57,8 @@ public class DialogueManager : MonoBehaviour
 
         StopAllCoroutines();
         StartCoroutine(SlowType(line));
+
+        onType?.Invoke();
     }
 
     public void FinishLine()
@@ -61,5 +70,7 @@ public class DialogueManager : MonoBehaviour
 
         StopAllCoroutines();
         textbox.text = currentLine;
+
+        onTypeEnd?.Invoke();
     }
 }

@@ -18,6 +18,7 @@ public class Battle : Action
 
         battlerName = heldBattler.battlerName;
         commandInput = $"fight {battlerName}";
+        outputLine = " ";
     }
 
     public override void DoAction()

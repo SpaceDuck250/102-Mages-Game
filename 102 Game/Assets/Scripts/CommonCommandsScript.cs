@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CommonCommandsScript : MonoBehaviour
 {
@@ -43,6 +44,12 @@ public class CommonCommandsScript : MonoBehaviour
             return true;
 
         }
+        else if (command == "go to main menu")
+        {
+            SceneManager.LoadScene("MainMenu");
+
+            return true;
+        }
 
         return false;
     }
@@ -51,9 +58,6 @@ public class CommonCommandsScript : MonoBehaviour
     {
         string invalidText = "Invalid command, type \"open help\" to see what commands you can execute...";
         DialogueManager.instance.PlayLine(invalidText);
-
-        //UIManager uiManager = GameManager.instance.uiManager;
-        //uiManager.CloseDialoguePageCounter();
 
         PageCounterScript pageCounterScript = GameManager.instance.uiManager.pageCounterScript;
         pageCounterScript.CloseDialoguePageCounter();

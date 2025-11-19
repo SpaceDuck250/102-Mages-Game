@@ -47,7 +47,7 @@ public class HealthBarUIScript : MonoBehaviour
         {
             float health = HealthComponent.health;
             float maxHealth = HealthComponent.maxHealth;
-            healthBar.OnHealthChanged(health, maxHealth);
+            healthBar.TakeDamage(health, maxHealth);
         }
     }
 }
