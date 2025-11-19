@@ -744,6 +744,9 @@ Transform:
   - {fileID: 2100963852}
   - {fileID: 2116457220}
   - {fileID: 1731372738}
+  - {fileID: 1357342563}
+  - {fileID: 901878354}
+  - {fileID: 1994765357}
   - {fileID: 1010430704}
   - {fileID: 12887152}
   - {fileID: 516536377}
@@ -755,6 +758,53 @@ Transform:
   - {fileID: 1975893591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &116970345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116970346}
+  - component: {fileID: 116970347}
+  m_Layer: 0
+  m_Name: ClownAroundAction (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &116970346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116970345}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 901878354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &116970347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116970345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: Clown Around
+  outputLine: You just clowned around
+  transitionNode: {fileID: 0}
 --- !u!1 &141467971
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,6 +990,98 @@ MonoBehaviour:
   transitionNode: {fileID: 1679868844}
   lootableItem: {fileID: 11400000, guid: 80558d07c5adf344e853247baab9fabd, type: 2}
   amount: 1
+--- !u!1 &180326531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180326532}
+  - component: {fileID: 180326535}
+  - component: {fileID: 180326534}
+  - component: {fileID: 180326533}
+  m_Layer: 0
+  m_Name: FightDog (Fight)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &180326532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180326531}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1993451490}
+  m_Father: {fileID: 901878354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180326533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180326531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e9372b702d0834ab7ab9aca4fe786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 0
+  dead: 0
+--- !u!114 &180326534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180326531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea1a409c42732a428d4682510acbc99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAttackLines:
+  - dog dog doggity dog
+  - okay okay
+  - fetch the stick
+  dialogueLines: []
+  battlerName: Smart Dog
+  battlerImage: {fileID: 21300000, guid: 81227ec9210058f4da40a77c9f98800f, type: 3}
+  fightSceneImage: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
+  damageRange:
+  - 2
+  - 20
+  healthScript: {fileID: 180326533}
+--- !u!114 &180326535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180326531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0e8ae4a5055bf4783f351ffd6b4b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: 
+  outputLine: 
+  transitionNode: {fileID: 1371693881}
+  heldBattler: {fileID: 180326534}
+  winNode: {fileID: 1994765358}
+  lostNode: {fileID: 1993451491}
 --- !u!1 &191590063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1400,53 @@ RectTransform:
   m_AnchoredPosition: {x: 152.24, y: -182.16}
   m_SizeDelta: {x: 404.49, y: 47.07}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &227206862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 227206863}
+  - component: {fileID: 227206864}
+  m_Layer: 0
+  m_Name: ClownAroundAction (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &227206863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227206862}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1994765357}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &227206864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227206862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: Clown Around
+  outputLine: You just clowned around
+  transitionNode: {fileID: 0}
 --- !u!1 &235118351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1683,53 @@ MonoBehaviour:
   commandInput: ask for answers
   outputLine: You asked him for the answers...
   transitionNode: {fileID: 4989839}
+--- !u!1 &317145778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317145779}
+  - component: {fileID: 317145780}
+  m_Layer: 0
+  m_Name: ReturnBack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &317145779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317145778}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993451490}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317145780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317145778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ea5921bd13290479fced1989a764ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: try again
+  outputLine: you travelled back in time...
+  transitionNode: {fileID: 901878355}
 --- !u!1 &317623601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,6 +3766,53 @@ Transform:
   - {fileID: 1466356292}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &699322063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699322064}
+  - component: {fileID: 699322065}
+  m_Layer: 0
+  m_Name: CheckOutTheNoise
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &699322064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699322063}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1357342563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &699322065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699322063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ea5921bd13290479fced1989a764ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: Inspect grass
+  outputLine: You look around to see...
+  transitionNode: {fileID: 901878355}
 --- !u!1 &719031397
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,6 +4622,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889713398}
   m_CullTransparentMesh: 1
+--- !u!1 &901878353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901878354}
+  - component: {fileID: 901878355}
+  m_Layer: 0
+  m_Name: DogNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901878354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901878353}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2707139, y: 0.3992309, z: -0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 116970346}
+  - {fileID: 180326532}
+  m_Father: {fileID: 116240828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901878355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901878353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da40d0d8ca7fcd45b23ffa144aa9d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choices: []
+  nodeImage: {fileID: 21300000, guid: 744df0f825015894b853b1bc4b67f18d, type: 3}
+  nodeTexts:
+  - A dog...
+  - but not just any dog..
+  - its your neighbours dog...
+  - and you hate your neighbour...
+  dontDisplayDialogueLines: 0
+  endlessTypeOfNode: 0
+  seenAllLinesOfDialogue: 0
 --- !u!1 &914256686
 GameObject:
   m_ObjectHideFlags: 0
@@ -4821,13 +5160,60 @@ MonoBehaviour:
   choices: []
   nodeImage: {fileID: 21300000, guid: 0e2ca58174e5f3c48ba0d1f181f3eadd, type: 3}
   nodeTexts:
-  - You enter the bus to find it almost all empty...
+  - The seats are almost all empty...
   - Strange...
   - You can still see some students though
   - Do you want to take a seat?
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 0
   seenAllLinesOfDialogue: 0
+--- !u!1 &1012054514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012054515}
+  - component: {fileID: 1012054516}
+  m_Layer: 0
+  m_Name: GoToBus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012054515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012054514}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1994765357}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1012054516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012054514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ea5921bd13290479fced1989a764ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: Go to bus
+  outputLine: You entered the bus...
+  transitionNode: {fileID: 1010430705}
 --- !u!1 &1018904432
 GameObject:
   m_ObjectHideFlags: 0
@@ -5152,6 +5538,53 @@ MonoBehaviour:
   possibleActionsText: {fileID: 641404861}
   commandProcessor: {fileID: 1462892240}
   opened: 0
+--- !u!1 &1128565576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128565577}
+  - component: {fileID: 1128565578}
+  m_Layer: 0
+  m_Name: IgnoreNoise
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1128565577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128565576}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1357342563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1128565578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128565576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ea5921bd13290479fced1989a764ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: ignore it
+  outputLine: Your curiosity is too high and you have no choice but to check it out...
+  transitionNode: {fileID: 0}
 --- !u!1 &1136137329
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,7 +5763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choices: []
-  nodeImage: {fileID: 21300000, guid: 6549970bf9babe848856f40a7b6c85f6, type: 3}
+  nodeImage: {fileID: 21300000, guid: 907887f606431a24ab3334cffa8cdc7f, type: 3}
   nodeTexts:
   - You lost the battle against William...
   - He was too smart for his own good...
@@ -5942,7 +6375,7 @@ GameObject:
   - component: {fileID: 1346970269}
   - component: {fileID: 1346970270}
   m_Layer: 0
-  m_Name: GoToBus
+  m_Name: GoOutsideHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5975,9 +6408,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ea5921bd13290479fced1989a764ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: go to bus
-  outputLine: you went to the bus...
-  transitionNode: {fileID: 1010430705}
+  commandInput: leave house
+  outputLine: you went outside your house...
+  transitionNode: {fileID: 1357342564}
+--- !u!1 &1357342562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357342563}
+  - component: {fileID: 1357342564}
+  m_Layer: 0
+  m_Name: Frontyard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1357342563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357342562}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2707139, y: 0.3992309, z: -0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1762472713}
+  - {fileID: 699322064}
+  - {fileID: 1128565577}
+  m_Father: {fileID: 116240828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1357342564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357342562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da40d0d8ca7fcd45b23ffa144aa9d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choices: []
+  nodeImage: {fileID: 21300000, guid: b00ef62fa3cbdba45930b23d4b5803f3, type: 3}
+  nodeTexts:
+  - The bus waits for you just outside your house, just on time...
+  - However...
+  - There was a strange rustling noise in the grass...
+  dontDisplayDialogueLines: 0
+  endlessTypeOfNode: 0
+  seenAllLinesOfDialogue: 0
 --- !u!1 &1371693879
 GameObject:
   m_ObjectHideFlags: 0
@@ -6269,7 +6758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9c7c770ad370d4ca19931b8b597c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentNode: {fileID: 4989839}
+  currentNode: {fileID: 1731372739}
   battleMode: 0
 --- !u!4 &1462892241
 Transform:
@@ -7284,6 +7773,53 @@ MonoBehaviour:
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 0
   seenAllLinesOfDialogue: 0
+--- !u!1 &1762472712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1762472713}
+  - component: {fileID: 1762472714}
+  m_Layer: 0
+  m_Name: ClownAroundAction (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1762472713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762472712}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1357342563}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762472714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762472712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: Clown Around
+  outputLine: You just clowned around
+  transitionNode: {fileID: 0}
 --- !u!1 &1773692006
 GameObject:
   m_ObjectHideFlags: 0
@@ -7761,7 +8297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choices: []
-  nodeImage: {fileID: 21300000, guid: 6549970bf9babe848856f40a7b6c85f6, type: 3}
+  nodeImage: {fileID: 21300000, guid: 907887f606431a24ab3334cffa8cdc7f, type: 3}
   nodeTexts:
   - You lost to billy...
   - He was too rich...
@@ -7983,7 +8519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commandInput: try again
   outputLine: you travelled back in time...
-  transitionNode: {fileID: 12887153}
+  transitionNode: {fileID: 516536378}
 --- !u!1 &1954975183
 GameObject:
   m_ObjectHideFlags: 0
@@ -8156,6 +8692,113 @@ MonoBehaviour:
   nodeTexts:
   - The bus stops at the school
   - time to go to inside the school building...
+  dontDisplayDialogueLines: 0
+  endlessTypeOfNode: 0
+  seenAllLinesOfDialogue: 0
+--- !u!1 &1993451489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1993451490}
+  - component: {fileID: 1993451491}
+  m_Layer: 0
+  m_Name: RestartNode (Lost)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1993451490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993451489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 317145779}
+  m_Father: {fileID: 180326532}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1993451491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993451489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da40d0d8ca7fcd45b23ffa144aa9d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choices: []
+  nodeImage: {fileID: 21300000, guid: 907887f606431a24ab3334cffa8cdc7f, type: 3}
+  nodeTexts:
+  - You lost to the dog...
+  - It was too cute...
+  dontDisplayDialogueLines: 0
+  endlessTypeOfNode: 1
+  seenAllLinesOfDialogue: 0
+--- !u!1 &1994765356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994765357}
+  - component: {fileID: 1994765358}
+  m_Layer: 0
+  m_Name: BusDriverScreamsAtYou
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1994765357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994765356}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2707139, y: 0.3992309, z: -0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 227206863}
+  - {fileID: 1012054515}
+  m_Father: {fileID: 116240828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1994765358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994765356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da40d0d8ca7fcd45b23ffa144aa9d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choices: []
+  nodeImage: {fileID: 21300000, guid: ddadfd0c89aa5004095e25e48038552f, type: 3}
+  nodeTexts:
+  - 'Bus Driver: YO KID STOP BEATING UP THAT DOG!!!'
+  - AND GET ON THE DAMN BUS ALREADY!!!
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 0
   seenAllLinesOfDialogue: 0
