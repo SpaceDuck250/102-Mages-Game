@@ -8,6 +8,7 @@ public class SettingsScript : MonoBehaviour
     public GameObject settingsPanel;
 
     public Slider musicSlider;
+    public Slider soundEffectsSlider;
 
     SoundManagerScript soundManagerScript;
 
@@ -29,9 +30,11 @@ public class SettingsScript : MonoBehaviour
     {
         soundManagerScript = DontDestroyScript.instance.transform.Find("SoundManager").GetComponent<SoundManagerScript>();
         float musicSliderInitialValue = soundManagerScript.musicVolume;
-        print(musicSliderInitialValue);
+        float soundEffectsSliderInitialValue = soundManagerScript.soundFXVolume;
+
 
         InitializeSliderValue(musicSlider, musicSliderInitialValue);
+        InitializeSliderValue(soundEffectsSlider, soundEffectsSliderInitialValue);
     }
 
     void InitializeSliderValue(Slider slider, float value)
@@ -43,5 +46,22 @@ public class SettingsScript : MonoBehaviour
     {
         AudioSource musicSrc = soundManagerScript.musicSrc;
         soundManagerScript.ChangeVolume(musicSrc, newVolume);
+    }
+
+    public void OnSoundEffectVolumeChanged(float newVolume)
+    {
+        AudioSource soundFXSrc = soundManagerScript.soundFXSrc;
+        soundManagerScript.ChangeVolume(soundFXSrc, newVolume);
+
+        AudioSource typingSrc = soundManagerScript.typingSrc;
+
+        float decreasedVolume = newVolume * soundManagerScript.typingSrcOffset;
+        decreasedVolume = Mathf.Min(1, decreasedVolume);
+
+        soundManagerScript.ChangeVolume(typingSrc, decreasedVolume);
+
+
+
+
     }
 }

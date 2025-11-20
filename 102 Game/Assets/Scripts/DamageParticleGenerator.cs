@@ -17,16 +17,24 @@ public class DamageParticleGenerator : MonoBehaviour
     {
         battleManager = GameManager.instance.battleManager;
 
-        battleManager.onPlayerAttack += onPlayerAttack;
+        battleManager.onBattleStart += OnBattleStart;
+        battleManager.onPlayerAttack += OnPlayerAttack;
     }
 
     private void OnDestroy()
     {
-        battleManager.onPlayerAttack -= onPlayerAttack;
+        battleManager.onPlayerAttack -= OnPlayerAttack;
+        battleManager.onBattleStart -= OnBattleStart;
+
 
     }
 
-    private void onPlayerAttack(float damage, Battler currentBattler)
+    private void OnBattleStart(Battler obj)
+    {
+        DestroyAllParticles();
+    }
+
+    private void OnPlayerAttack(float damage, Battler currentBattler)
     {
         int roundedDamage = Mathf.RoundToInt(damage);
         SpawnDamageParticle(roundedDamage, enemy.position);
@@ -51,6 +59,14 @@ public class DamageParticleGenerator : MonoBehaviour
     {
         Vector3 randomPointAround = (Random.insideUnitCircle * radius) + (Vector2)originPoint;
         return randomPointAround;
+    }
+
+    private void DestroyAllParticles()
+    {
+        foreach (Transform child in damageParticleContainer)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
 }

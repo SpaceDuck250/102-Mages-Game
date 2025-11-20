@@ -149,7 +149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1018904433}
+  - {fileID: 1745896509}
   - {fileID: 261775132}
   m_Father: {fileID: 116240828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -207,7 +207,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1646830517}
   - {fileID: 1030105787}
   - {fileID: 1507067916}
   m_Father: {fileID: 116240828}
@@ -802,8 +801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
+  commandInput: Bark at dog
+  outputLine: You barked at the dog... It didn't feel threatened...
   transitionNode: {fileID: 0}
 --- !u!1 &141467971
 GameObject:
@@ -1057,7 +1056,7 @@ MonoBehaviour:
   - okay okay
   - fetch the stick
   dialogueLines: []
-  battlerName: Smart Dog
+  battlerName: Dog
   battlerImage: {fileID: 21300000, guid: 81227ec9210058f4da40a77c9f98800f, type: 3}
   fightSceneImage: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   damageRange:
@@ -1444,8 +1443,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
+  commandInput: refuse
+  outputLine: Your intrustive thoughts tell you to say no and annoy him some more
+    but you didnt actually do it...
   transitionNode: {fileID: 0}
 --- !u!1 &235118351
 GameObject:
@@ -1491,8 +1491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
+  commandInput: smash phone
+  outputLine: You just smashed your phone, what a dumb thing to do...
   transitionNode: {fileID: 0}
 --- !u!1 &261775131
 GameObject:
@@ -2783,6 +2783,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1176934821}
+  - {fileID: 1099008104}
   m_Father: {fileID: 116240828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &516536378
@@ -3171,7 +3172,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 989049948}
   - {fileID: 17142310}
   m_Father: {fileID: 116240828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4234,8 +4234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
+  commandInput: Check under bed
+  outputLine: There were no monsters under the bed...
   transitionNode: {fileID: 0}
 --- !u!4 &837345648
 Transform:
@@ -4451,53 +4451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialoguePageCounter: {fileID: 1578793351}
---- !u!1 &881652072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 881652073}
-  - component: {fileID: 881652074}
-  m_Layer: 0
-  m_Name: ClownAroundAction (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &881652073
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881652072}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1679868843}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &881652074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881652072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
-  transitionNode: {fileID: 0}
 --- !u!1 &882999496
 GameObject:
   m_ObjectHideFlags: 0
@@ -5063,53 +5016,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUIBuilder: {fileID: 81707531}
   testItems: []
---- !u!1 &989049947
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 989049948}
-  - component: {fileID: 989049949}
-  m_Layer: 0
-  m_Name: ClownAroundAction (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &989049948
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989049947}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 590053123}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &989049949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989049947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
-  transitionNode: {fileID: 0}
 --- !u!1 &1010430703
 GameObject:
   m_ObjectHideFlags: 0
@@ -5214,53 +5120,6 @@ MonoBehaviour:
   commandInput: Go to bus
   outputLine: You entered the bus...
   transitionNode: {fileID: 1010430705}
---- !u!1 &1018904432
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1018904433}
-  - component: {fileID: 1018904434}
-  m_Layer: 0
-  m_Name: ClownAroundAction (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1018904433
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018904432}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4989838}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1018904434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018904432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
-  transitionNode: {fileID: 0}
 --- !u!1 &1030105786
 GameObject:
   m_ObjectHideFlags: 0
@@ -5440,6 +5299,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commandInput: Clown Around
   outputLine: You just clowned around
+  transitionNode: {fileID: 0}
+--- !u!1 &1099008103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1099008104}
+  - component: {fileID: 1099008105}
+  m_Layer: 0
+  m_Name: ClownAroundAction (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1099008104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099008103}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 516536377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099008105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099008103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: clown on him
+  outputLine: 'You clowned on him more.. He is grinding his golden teeth now... '
   transitionNode: {fileID: 0}
 --- !u!1 &1099209881
 GameObject:
@@ -6758,7 +6664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9c7c770ad370d4ca19931b8b597c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentNode: {fileID: 1731372739}
+  currentNode: {fileID: 1423942352}
   battleMode: 0
 --- !u!4 &1462892241
 Transform:
@@ -7540,53 +7446,6 @@ MonoBehaviour:
   commandInput: eat banana
   outputLine: You ate some bananas, what a bland breakfast.
   transitionNode: {fileID: 1731372739}
---- !u!1 &1646830516
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1646830517}
-  - component: {fileID: 1646830518}
-  m_Layer: 0
-  m_Name: ClownAroundAction (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1646830517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646830516}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 12887152}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1646830518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646830516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
-  transitionNode: {fileID: 0}
 --- !u!1 &1679868842
 GameObject:
   m_ObjectHideFlags: 0
@@ -7617,7 +7476,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 881652073}
   - {fileID: 1967334344}
   - {fileID: 1328677242}
   m_Father: {fileID: 116240828}
@@ -7773,6 +7631,54 @@ MonoBehaviour:
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 0
   seenAllLinesOfDialogue: 0
+--- !u!1 &1745896508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745896509}
+  - component: {fileID: 1745896510}
+  m_Layer: 0
+  m_Name: ClownAroundAction (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1745896509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745896508}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4989838}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1745896510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745896508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: Ask for help
+  outputLine: You asked for help... He started rambling about quadratics... You didn't
+    understand..
+  transitionNode: {fileID: 0}
 --- !u!1 &1762472712
 GameObject:
   m_ObjectHideFlags: 0
@@ -7817,8 +7723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
+  commandInput: touch grass
+  outputLine: You finally touched grass.. Rare for a gamer like you...
   transitionNode: {fileID: 0}
 --- !u!1 &1773692006
 GameObject:
@@ -8038,8 +7944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
+  commandInput: Stare at him
+  outputLine: You stared at him... Now you are a creep...
   transitionNode: {fileID: 0}
 --- !u!1 &1828488143
 GameObject:
@@ -8304,53 +8210,6 @@ MonoBehaviour:
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 1
   seenAllLinesOfDialogue: 0
---- !u!1 &1871099620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1871099621}
-  - component: {fileID: 1871099622}
-  m_Layer: 0
-  m_Name: ClownAroundAction (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1871099621
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871099620}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2707139, y: -0.3992309, z: 0.006727688}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2116457220}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1871099622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871099620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  commandInput: Clown Around
-  outputLine: You just clowned around
-  transitionNode: {fileID: 0}
 --- !u!1 &1889850972
 GameObject:
   m_ObjectHideFlags: 0
@@ -9750,7 +9609,6 @@ Transform:
   m_Children:
   - {fileID: 203301797}
   - {fileID: 1592763643}
-  - {fileID: 1871099621}
   - {fileID: 364890292}
   - {fileID: 341268366}
   m_Father: {fileID: 116240828}

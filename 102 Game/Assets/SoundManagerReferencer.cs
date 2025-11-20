@@ -28,7 +28,8 @@ public class SoundManagerReferencer : MonoBehaviour
         battleManager.onPlayerAttack += PlayAttackSounds;
         battleManager.onEnemyAttack += PlayEnemyAttackSound;
 
-
+        PlayNormalMusic(null);
+        
     }
 
     private void OnDestroy()
@@ -97,14 +98,29 @@ public class SoundManagerReferencer : MonoBehaviour
 
     private void PlayBattleMusic(Battler obj)
     {
+        AudioSource musicSrc = soundManager.musicSrc;
+        musicSrc.Stop();
+
+        AudioSource battleMusicSrc = soundManager.battleMusicSrc;
         AudioClip battleMusic = soundManager.battleMusic;
-        soundManager.PlayMusic(battleMusic);
+        soundManager.PlayMusic(battleMusicSrc, battleMusic);
+
+        float battleMusicVolume = soundManager.battleMusicVolume;
+        soundManager.ChangeVolume(battleMusicSrc, battleMusicVolume);
     }
 
     private void PlayNormalMusic(Battler obj)
     {
-        AudioClip normalMusic = soundManager.musicClip1;
-        soundManager.PlayMusic(normalMusic);  
+        AudioSource battleMusicSrc = soundManager.battleMusicSrc;
+        battleMusicSrc.Stop();
+
+        AudioSource musicSrc = soundManager.musicSrc;
+        AudioClip normalMusic = soundManager.musicClip2;
+        soundManager.PlayMusic(musicSrc, normalMusic);
+
+        float normalMusicVolume = soundManager.musicVolume;
+        soundManager.ChangeVolume(musicSrc, normalMusicVolume);
+
     }
 
 
