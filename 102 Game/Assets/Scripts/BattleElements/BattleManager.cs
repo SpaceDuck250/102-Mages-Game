@@ -21,15 +21,43 @@ public class BattleManager : MonoBehaviour
     public event Action<Battler> onBattleStart;
     public event Action<Battler> onBattleEnd;
 
+    private BlockAttackScript blockAttackScript;
+    [SerializeField]
+    private bool blocked = false;
+
 
     private void Awake()
     {
         instance = this;
         player = GameManager.instance.player;
         wordGiver = GameManager.instance.wordGiver;
+
     }
 
-    public void CommenceBattle(Battler newBattler)
+    private void Start()
+    {
+        blockAttackScript = GetComponent<BlockAttackScript>();
+        blockAttackScript.onBlock += OnBlock;
+        blockAttackScript.onUnblock += OnUnblock;
+    }
+
+    private void OnDestroy()
+    {
+        blockAttackScript.onBlock -= OnBlock;
+        blockAttackScript.onUnblock -= OnUnblock;
+    }
+
+    private void OnUnblock()
+    {
+        blocked = false;
+    }
+
+    private void OnBlock(float blockTime)
+    {
+        blocked = true;
+    }
+
+    public IEnumerator CommenceBattle(Battler newBattler)
     {
         currentBattler = newBattler;
         RevivePlayerAndBattler();
@@ -37,6 +65,9 @@ public class BattleManager : MonoBehaviour
         isPlayersTurn = true;
 
         onBattleStart?.Invoke(currentBattler);
+
+        float loadingTime = 5;
+        yield return new WaitForSeconds(loadingTime);
 
         StartCoroutine(GivePlayerWordToType()); // This will start the cycle back and forth between the player and the battler
     }
@@ -82,7 +113,7 @@ public class BattleManager : MonoBehaviour
 
     public IEnumerator LetBattlerAttack() // Then check if the player died
     {
-        float waitTime = 1.2f;
+        float waitTime = 1.75f;
         yield return new WaitForSeconds(waitTime);
 
         float damageDelt = currentBattler.PickDamageValue();
@@ -106,6 +137,11 @@ public class BattleManager : MonoBehaviour
 
     void DealDamageTo(float damage, GameObject obj)
     {
+        if (blocked && obj.tag == "Player")
+        {
+            return;
+        }
+
         HealthScript healthComponent = obj.GetComponent<HealthScript>();
         healthComponent.TakeDamage(damage);
 

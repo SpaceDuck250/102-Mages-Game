@@ -17,29 +17,30 @@ public class WordGiver : MonoBehaviour
     public bool reachedDeadline;
 
     public bool challengeStarted = false;
+    private CommandProcessor commandProcessor;
 
-    private void Awake()
+    private void Start()
     {
         UImanager = GameManager.instance.uiManager;
         battlePanelScript = GameManager.instance.uiManager.battlePanelScript;
+
+        commandProcessor = CommandProcessor.instance;
+        commandProcessor.onBattleCommandEntered += OnBattleCommandEntered;
+    }
+
+    private void OnDestroy()
+    {
+        commandProcessor.onBattleCommandEntered -= OnBattleCommandEntered;
     }
 
     private void Update()
     {
-        if (!timerOn)
-        {
-            return;
-        }
+        TryUseTimer();
+    }
 
-        timer -= Time.deltaTime;
-        if (timer < 0)
-        {
-            timer = timerStartValue;
-            reachedDeadline = true;
-            timerOn = false;
-
-            FinishWordChallenge();
-        }
+    private void OnBattleCommandEntered(string command)
+    {
+        CheckIfCommandMatchesWord(command);
     }
 
     public void GenerateWordChallenge()
@@ -96,5 +97,23 @@ public class WordGiver : MonoBehaviour
         float timeTaken = timerStartValue - timer;
 
         BattleManager.instance.LetPlayerAttack(timeTaken, wordCount);
+    }
+
+    private void TryUseTimer()
+    {
+        if (!timerOn)
+        {
+            return;
+        }
+
+        timer -= Time.deltaTime;
+        if (timer < 0)
+        {
+            timer = timerStartValue;
+            reachedDeadline = true;
+            timerOn = false;
+
+            FinishWordChallenge();
+        }
     }
 }

@@ -5,17 +5,17 @@ public class CommandProcessor : MonoBehaviour
 {
     public static CommandProcessor instance;
     CommonCommandsScript commonCommands;
-    WordGiver wordGiver;
 
     public NodeScript currentNode;
     public Action<NodeScript> onNewNodeEnter;
+
+    public event Action<string> onBattleCommandEntered;
 
     public bool battleMode = false;
 
     private void Awake()
     {
         instance = this;
-        wordGiver = GameManager.instance.wordGiver;
         commonCommands = GetComponent<CommonCommandsScript>();
     }
 
@@ -30,7 +30,8 @@ public class CommandProcessor : MonoBehaviour
 
         if (battleMode)
         {
-            wordGiver.CheckIfCommandMatchesWord(cleanedUpCommand);
+            onBattleCommandEntered?.Invoke(cleanedUpCommand);
+
             return;
         }
 

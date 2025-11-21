@@ -31,10 +31,6 @@ public class Battle : Action
 
 
         cprocessor.battleMode = true;
-        bmanager.CommenceBattle(heldBattler);
-
-        //heldBattler.SetupAfterBattleNode(cprocessor.currentNode);
-        //NodeScript newNode = heldBattler.gameObject.transform.Find("AfterBattleNode").GetComponent<NodeScript>();
-        //newNode.SetNodeToCurrentNode();
+        StartCoroutine(bmanager.CommenceBattle(heldBattler));
     }
 }

@@ -21,8 +21,8 @@ public class BattlePanelScript : MonoBehaviour
         battleManager = GameManager.instance.battleManager;
         battleManager.onBattleStart += SetupBattlePanel;
         battleManager.onBattleEnd += CloseBattlePanel;
-    }
 
+    }
 
     private void OnDestroy()
     {
