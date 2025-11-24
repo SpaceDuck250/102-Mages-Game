@@ -105,8 +105,6 @@ public class SoundManagerReferencer : MonoBehaviour
         AudioClip battleMusic = soundManager.battleMusic;
         soundManager.PlayMusic(battleMusicSrc, battleMusic);
 
-        float battleMusicVolume = soundManager.battleMusicVolume;
-        soundManager.ChangeVolume(battleMusicSrc, battleMusicVolume);
     }
 
     private void PlayNormalMusic(Battler obj)
@@ -117,9 +115,6 @@ public class SoundManagerReferencer : MonoBehaviour
         AudioSource musicSrc = soundManager.musicSrc;
         AudioClip normalMusic = soundManager.musicClip2;
         soundManager.PlayMusic(musicSrc, normalMusic);
-
-        float normalMusicVolume = soundManager.musicVolume;
-        soundManager.ChangeVolume(musicSrc, normalMusicVolume);
 
     }
 

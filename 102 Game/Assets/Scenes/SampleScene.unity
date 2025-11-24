@@ -7811,7 +7811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9c7c770ad370d4ca19931b8b597c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentNode: {fileID: 4989839}
+  currentNode: {fileID: 1423942352}
   battleMode: 0
 --- !u!4 &1462892241
 Transform:
