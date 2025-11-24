@@ -2147,6 +2147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 579882855}
   audioMixer: {fileID: 24100000, guid: 1f2765716f2d7ed4a97d4b6bfcdafb06, type: 2}
+  settingsLoader: {fileID: 547709946}
 --- !u!1 &579882855
 GameObject:
   m_ObjectHideFlags: 0

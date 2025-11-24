@@ -50,8 +50,30 @@ public class CommonCommandsScript : MonoBehaviour
 
             return true;
         }
+        else if (command == "save game")
+        {
+            DataSaver dataSaver = GameManager.instance.dataSaver;
+            dataSaver.SaveGame();
+            return true;
+        }
+        else if (command == "load game")
+        {
+            DataSaver dataSaver = GameManager.instance.dataSaver;
+            dataSaver.LoadGame();
+            return true;
+        }
+        else if (command == "new game")
+        {
+            DataSaver dataSaver = GameManager.instance.dataSaver;
+            dataSaver.ClearData();
+            SceneManager.LoadScene("MainMenu");
+            return true;
+
+
+        }
 
         return false;
+
     }
 
     public void OutputInvalidCommandText()

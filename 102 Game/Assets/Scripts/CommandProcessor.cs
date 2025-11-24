@@ -13,6 +13,7 @@ public class CommandProcessor : MonoBehaviour
 
     public bool battleMode = false;
 
+
     private void Awake()
     {
         instance = this;
@@ -23,6 +24,7 @@ public class CommandProcessor : MonoBehaviour
     {
         currentNode.SetNodeToCurrentNode();
     }
+
 
     public void EnterCommand(string command)
     {

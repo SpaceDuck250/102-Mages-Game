@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public WordGiver wordGiver;
     public UIManager uiManager;
     public NodeDialogueSender nodeDialogueSender;
+    public DataSaver dataSaver;
+    public DataConverter dataConverter;
 
     private void Awake()
     {

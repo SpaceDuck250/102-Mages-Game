@@ -8,6 +8,8 @@ public class MainSettingsScript : MonoBehaviour
     private bool opened = false;
 
     public AudioMixer audioMixer;
+    public SettingsLoader settingsLoader;
+
 
     public void OpenCloseSettingsPanel()
     {
@@ -26,19 +28,20 @@ public class MainSettingsScript : MonoBehaviour
     public void OnMasterVolumeChanged(float newVolume)
     {
         audioMixer.SetFloat("masterVolume", newVolume);
-        PlayerPrefs.SetFloat("masterVolume", newVolume);
+        settingsLoader.masterVolume = newVolume;
     }
 
     public void OnMusicVolumeChanged(float newVolume)
     {
         audioMixer.SetFloat("musicVolume", newVolume);
-        PlayerPrefs.SetFloat("musicVolume", newVolume);
+        settingsLoader.musicVolume = newVolume;
+
     }
 
     public void OnSFXVolumeChanged(float newVolume)
     {
         audioMixer.SetFloat("sfxVolume", newVolume);
-        PlayerPrefs.SetFloat("sfxVolume", newVolume);
+        settingsLoader.sfxVolume = newVolume;
     }
 
     public void ToggleFullScreen(bool toggled)
@@ -48,6 +51,6 @@ public class MainSettingsScript : MonoBehaviour
 
         int toggledValue = toggled ? 1 : 0;
 
-        PlayerPrefs.SetInt("fullScreenToggled", toggledValue);
+        settingsLoader.fullScreenToggled = toggledValue;
     }
 }
