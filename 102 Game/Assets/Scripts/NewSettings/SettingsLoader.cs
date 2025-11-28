@@ -5,6 +5,8 @@ public class SettingsLoader : MonoBehaviour
 {
     public MainSettingsScript settingsScript;
 
+    private SoundManagerScript soundManager;
+
     public Slider masterSlider, musicSlider, sfxSlider;
 
     public Toggle fullScreenToggle;
@@ -30,14 +32,18 @@ public class SettingsLoader : MonoBehaviour
     public int fullScreenToggled
     {
         get { return PlayerPrefs.GetInt("fullScreenToggled", 0); }
-        set { PlayerPrefs.SetInt("fullScreenToggled", value);  }
+        set { PlayerPrefs.SetInt("fullScreenToggled", value); }
     }
 
 
 
     private void Start()
     {
+        soundManager = DontDestroyScript.instance.gameObject.transform.Find("SoundManager").GetComponent<SoundManagerScript>();
+
         InitializeSettingsValues();
+
+        PlayMainMenuMusic();
     }
 
     private void InitializeSettingsValues()
@@ -58,5 +64,11 @@ public class SettingsLoader : MonoBehaviour
         bool toggled = toggledValue == 0 ? false : true;
         fullScreenToggle.isOn = toggled;
         settingsScript.ToggleFullScreen(toggled);
+    }
+
+    private void PlayMainMenuMusic()
+    {
+        AudioClip mainMenuMusic = soundManager.musicClip1;
+        soundManager.PlayMusic(soundManager.musicSrc, mainMenuMusic);
     }
 }

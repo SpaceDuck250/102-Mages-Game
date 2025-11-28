@@ -168,11 +168,11 @@ MonoBehaviour:
   choices: []
   nodeImage: {fileID: 21300000, guid: d7d59ed04f899154c89c74e4256ddc6a, type: 3}
   nodeTexts:
-  - 'William Smartkid: Oh hi dogerton!'
-  - You mean for pages 6 and 7? well I don't want to get in trouble for giving away
-    answers...
-  - Sorry... But if you need me to explain the topic then I'm more than happy to
-    help!
+  - 'Wan Soth: Oh hi Kishna.. wait I thought you graduated?? '
+  - nevermind...
+  - anyways you want to borrow my notebook?
+  - 'uhh... '
+  - no.
   - You have no other choice, do you fight him?
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 1
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 12887152}
   - component: {fileID: 12887153}
   m_Layer: 0
-  m_Name: BillyNode
+  m_Name: TggsNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,13 +226,13 @@ MonoBehaviour:
   choices: []
   nodeImage: {fileID: 21300000, guid: 96dfaa65cfb6d444e862b9276fbea99e, type: 3}
   nodeTexts:
-  - 'Billy Richkid: Hello dogerton..'
+  - 'Kao Longmeng: Oh hi Kishna... Didn''t expect to see you here...'
+  - Guess thats what happens when you skip too many classes...
   - Sadly today my mom's private jet broke down so I'll have to use the public transport
     system.
   - What do you call it... a bus?
   - Anyways I have an offer to make with you...
-  - Remember the math homework from last week?
-  - Me neither but that nerd at the back has the answers..
+  - I need you to troll that nerd at the back.. Wan Soth..
   - If you can bring me his notebook I'll pay you with a new apple device
   - Do you take the deal?
   dontDisplayDialogueLines: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
   - {fileID: 0}
   nodeImage: {fileID: 21300000, guid: 0e2ca58174e5f3c48ba0d1f181f3eadd, type: 3}
   nodeTexts:
-  - You just humiliated William...
+  - You just humiliated Wan Soth..
   - You asked him some pretty difficult problems...
   - That you dont even know the answer to yourself...
   dontDisplayDialogueLines: 0
@@ -1189,15 +1189,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAttackLines:
   - dog dog doggity dog
-  - okay okay
+  - roll around
   - fetch the stick
   dialogueLines: []
   battlerName: Dog
   battlerImage: {fileID: 21300000, guid: 81227ec9210058f4da40a77c9f98800f, type: 3}
   fightSceneImage: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   damageRange:
-  - 2
-  - 20
+  - 10
+  - 25
   healthScript: {fileID: 180326533}
 --- !u!114 &180326535
 MonoBehaviour:
@@ -1813,7 +1813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e9372b702d0834ab7ab9aca4fe786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   health: 0
   dead: 0
 --- !u!114 &261775134
@@ -1833,11 +1833,11 @@ MonoBehaviour:
   - twenty one
   - six seven six seven
   dialogueLines: []
-  battlerName: William
+  battlerName: Wan Soth
   battlerImage: {fileID: 21300000, guid: 053ddd1a5a74707488ba2048f6688d9d, type: 3}
   fightSceneImage: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   damageRange:
-  - 10
+  - 15
   - 25
   healthScript: {fileID: 261775133}
 --- !u!114 &261775135
@@ -1952,8 +1952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: ask for answers
-  outputLine: You asked him for the answers...
+  commandInput: ask to borrow book
+  outputLine: Lets see if the trick works...
   transitionNode: {fileID: 4989839}
 --- !u!1 &317145778
 GameObject:
@@ -3172,7 +3172,7 @@ GameObject:
   - component: {fileID: 516536377}
   - component: {fileID: 516536378}
   m_Layer: 0
-  m_Name: PissedBillyNode
+  m_Name: PissedTggsNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3749,8 +3749,10 @@ MonoBehaviour:
   choices: []
   nodeImage: {fileID: 21300000, guid: 96dfaa65cfb6d444e862b9276fbea99e, type: 3}
   nodeTexts:
-  - 'Billy Richkid: Pleasure doing business with you Dogerton...'
-  - and here is your brand new phone...
+  - 'Kao Longmeng: Pleasure doing business with you Kishna...'
+  - By the way, you can just call me TGGS. Its my nickname
+  - Oh right and your reward.
+  - Here is your brand new phone...
   - definitely not my old used phone...
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 0
@@ -6193,8 +6195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandInput: yes
-  outputLine: Billy shakes your hand and you go to the back of bus to find the smart
-    kid
+  outputLine: Longmeng shakes your hand and you go to the back of bus to find the
+    smart kid
   transitionNode: {fileID: 1829380565}
 --- !u!1 &1042463451
 GameObject:
@@ -6779,7 +6781,7 @@ MonoBehaviour:
   choices: []
   nodeImage: {fileID: 21300000, guid: 907887f606431a24ab3334cffa8cdc7f, type: 3}
   nodeTexts:
-  - You lost the battle against William...
+  - You lost the battle against Wan Soth...
   - He was too smart for his own good...
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 1
@@ -6831,7 +6833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e9372b702d0834ab7ab9aca4fe786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 250
   health: 0
   dead: 0
 --- !u!114 &1176934823
@@ -6851,7 +6853,7 @@ MonoBehaviour:
   - gold bars iron cars
   - golden apple
   dialogueLines: []
-  battlerName: Billy
+  battlerName: Kao Longmeng
   battlerImage: {fileID: 21300000, guid: cb006aaf3c9d96d49912febe126ff4f3, type: 3}
   fightSceneImage: {fileID: 21300000, guid: b9d04103829c75d4ab42ccb6e8518a12, type: 3}
   damageRange:
@@ -7372,7 +7374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandInput: Hand over notebook
-  outputLine: You handed over Williams book
+  outputLine: You handed over Soths book
   transitionNode: {fileID: 590053124}
   itemToTrade: {fileID: 11400000, guid: 80558d07c5adf344e853247baab9fabd, type: 2}
   tradeAmount: 1
@@ -7690,12 +7692,15 @@ MonoBehaviour:
   nodeImage: {fileID: 21300000, guid: 2485e479b02e5c7408539ee6038b87a4, type: 3}
   nodeTexts:
   - You wake up to a terrible morning...
-  - its monday.. which means school again
+  - Its your first day of grade 12...
   - but you remembered in your dream that you can type "open help" to display possible
     commands...
   - oh yeah and right shift if you want to speed up text...
   - also you can type "open inv" to display your inventory...
-  - 'one last thing.. use "next" to continue and start the dialogue... '
+  - 'You can save the game by typing "save game" and load that saved run by typing
+    "load game" '
+  - Last few things.. type "new game" if you want a new run and "go to main menu"
+    to go to the main menu..
   - anyways... your mom calls you downstairs for breakfast
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 0
@@ -8279,7 +8284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandInput: no
-  outputLine: Billy gets angry, now you have no choice but to fight him...
+  outputLine: Longmeng gets angry, now you have no choice but to fight him...
   transitionNode: {fileID: 516536378}
 --- !u!1 &1538385465
 GameObject:
@@ -8821,7 +8826,7 @@ MonoBehaviour:
   choices: []
   nodeImage: {fileID: 21300000, guid: 96dfaa65cfb6d444e862b9276fbea99e, type: 3}
   nodeTexts:
-  - 'Billy Richkid: Back so soon...'
+  - 'Kao Longmeng: Back so soon..'
   - Now to complete the deal, hand over his notebook...
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 0
@@ -9212,9 +9217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa302d5ee777214890f48c4ad8a87b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInput: Ask for help
-  outputLine: You asked for help... He started rambling about quadratics... You didn't
-    understand..
+  commandInput: Ask about dinosaurs
+  outputLine: Soth seems very knowledgeable on dinosaurs.. Probably because he lived
+    during that time.
   transitionNode: {fileID: 0}
 --- !u!1 &1752910719
 GameObject:
@@ -9869,7 +9874,7 @@ MonoBehaviour:
   choices: []
   nodeImage: {fileID: 21300000, guid: 907887f606431a24ab3334cffa8cdc7f, type: 3}
   nodeTexts:
-  - You lost to billy...
+  - You lost to Longmeng...
   - He was too rich...
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 1
@@ -10290,6 +10295,9 @@ MonoBehaviour:
   nodeImage: {fileID: 21300000, guid: 25788cbd86c724740a314dc68fad9302, type: 3}
   nodeTexts:
   - The bus stops at the school
+  - Piragun international school
+  - more like Intern national school.. because they have so many interns...
+  - anyways...
   - time to go to inside the school building...
   dontDisplayDialogueLines: 0
   endlessTypeOfNode: 0
@@ -10709,6 +10717,7 @@ GameObject:
   - component: {fileID: 2060593430}
   - component: {fileID: 2060593429}
   - component: {fileID: 2060593432}
+  - component: {fileID: 2060593433}
   m_Layer: 5
   m_Name: DamageParticle
   m_TagString: Untagged
@@ -10847,6 +10856,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeAlive: 1
+  moveSpeed: 0.7
+  downSpeed: 0.01
+  upForce: 0.003
+--- !u!95 &2060593433
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060593428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9115eb26e14e9ce45931829b7230e7ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2066009567
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a1a5d5e34f6df4ba0aec5c866598dc, type: 3}
   m_Name: Notebook
   m_EditorClassIdentifier: 
-  itemName: Williams book
+  itemName: Soths Book
   itemDescription: 
   itemSprite: {fileID: 21300000, guid: 70eaf97f6936a5e408d6644cf3378b73, type: 3}

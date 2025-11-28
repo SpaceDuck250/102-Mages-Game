@@ -13,12 +13,6 @@ public class Battler : MonoBehaviour
     public float[] damageRange = new float[2];
     public HealthScript healthScript;
 
-    public void SetupAfterBattleNode(NodeScript previousNode)
-    {
-        //Action action = gameObject.transform.Find("ReturnAction").GetComponent<Action>();
-        //action.transitionNode = previousNode;
-    }
-
     public string ChooseRandomLine(List<string> lines)
     {
         int ranValue = Random.Range(0, lines.Count);

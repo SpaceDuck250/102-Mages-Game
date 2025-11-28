@@ -8,6 +8,7 @@ public class NodeScript : MonoBehaviour
 
     public Sprite nodeImage;
 
+    [TextArea(2, 10)]
     public List<string> nodeTexts = new List<string>();
 
     bool initializedActions = false;
@@ -24,9 +25,6 @@ public class NodeScript : MonoBehaviour
         CommandProcessor commandProcessor = CommandProcessor.instance;
         commandProcessor.currentNode = this;
         commandProcessor.onNewNodeEnter?.Invoke(this);
-
-        //UIManager uiManager = GameManager.instance.uiManager;
-        //uiManager.UpdateCurrentNodeImage(nodeImage);
     }
 
     public bool CheckIfEnteredChoicesAndExecute(string input)

@@ -19,8 +19,6 @@ public class SoundManagerScript : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic(musicSrc, musicClip1);
-
         typingSrc.loop = true;
         typingSrc.clip = typingClip;
         typingSrc.Play();

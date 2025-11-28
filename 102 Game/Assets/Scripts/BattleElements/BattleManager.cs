@@ -66,7 +66,7 @@ public class BattleManager : MonoBehaviour
 
         onBattleStart?.Invoke(currentBattler);
 
-        float loadingTime = 5;
+        float loadingTime = 4.15f;
         yield return new WaitForSeconds(loadingTime);
 
         StartCoroutine(GivePlayerWordToType()); // This will start the cycle back and forth between the player and the battler
